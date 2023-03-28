@@ -1,0 +1,541 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+/* 상단영역 */
+header {
+  width: 1100px;
+  margin: 0 auto;
+  /* 수평중앙정렬 */
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 550px);
+  z-index: 1;
+}
+
+header h1 {
+
+}
+
+header h1 a {
+  background-image: url(../img/hj_logo.jpg);
+  width: 230px;
+  height: 25px;
+  display: block;
+  font-size: 0;
+}
+
+
+nav {
+  display: flex;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+ul.gnb {
+
+  border-top: 1px solid #80808069;
+}
+
+ul.gnb li {
+  /*클래스명이gnb인ul 아래에 위치한(있는) li*/
+  /* 00도 00시 00구와 동일하다 */
+  margin-top: -1px;
+}
+
+ul.gnb li a {
+  padding: 10px 30px;
+  display: block;
+  border-top: 2px solid transparent;
+  transition: border 1s;
+}
+
+ul.gnb li a:hover {
+  color: red;
+  border-top: 2px solid blue;
+}
+
+ul.etcmenu {
+  position: absolute;
+  top: 8px;
+  right: 0px;
+}
+
+ul.etcmenu li {}
+
+ul.etcmenu li a {
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+ul.etcmenu li a:hover {
+  color: #ffb300;
+}
+
+ul.etcmenu li:first-child a::after {
+  content: "▼";
+  color: #666;
+  font-size: 7px;
+  vertical-align: 2px;
+  /*vertical-align 글자 수직 정력*/
+}
+
+li {}
+
+/* 타이틀영역 */
+div#title {
+  height: 600px;
+  /*! border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 73%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+div#title::before {
+  /*! content: ""; */
+  display: block;
+  width: 0;
+  height: 0;
+  border: 240px solid #4848fdad;
+  border-right-width: 248px;
+  border-left-width: 240px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+div#title h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+div#title h2 span {
+  font-weight: 500;
+}
+
+div#title h2::after {
+  content: "";
+  width: 2px;
+  height: 60px;
+  display: block;
+  background-color: #666;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+div#title p {
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  position: relative;
+  top: -16px;
+}
+
+div#title a {
+  background-color: #e8ddc7;
+  color: white;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s;
+}
+div#title a:hover{
+  background-color:orange;
+}
+div#title a::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border: 50px solid green;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #e8ddc7;
+  border-left-color: transparent;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  border-bottom-width: 20px;
+  transition: all 1s;
+}
+
+div#title a::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border: 50px solid green;
+  border-top-color: #e8ddc7;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  border-top-width: 20px;
+  transition: all 1s;
+}
+div#title a:hover::after{
+  border-top-color: orange;
+}div#title a:hover::before{
+  border-bottom-color: orange;
+}
+/* 메인영역-한진소개 */
+main {
+
+  /*! text-align: center; */
+  /*! display: flex; */
+  /*! flex-direction: column; */
+  /*! justify-content: center; */
+}
+
+main section#intro {
+
+  /*! background-color: #ccc; */
+}
+
+main section#intro div {
+
+  width: 1100px;
+  margin: 0 auto;
+}
+
+main section#intro div h2 {
+
+  display: none;
+}
+
+main section#intro div ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+main section#intro div ul li {
+
+  width: calc(100% / 4 - 60px /4);
+  height: 260px;
+  /*! background-color: #ccc; */
+  text-align: center;
+  /*! align-items: center; */
+  /*! justify-content: center; */
+  /*! display: flex; */
+}
+main section#intro div ul li:hover{
+  
+  background-color: rgb(0,0,255,0.4);
+}
+main section#intro div ul li a {
+
+  display: block;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+main section#intro div ul li:nth-child(1) a {
+  background: -moz-radial-gradient(circle, #8ca2b250 10%, #8ca2b2 100%);
+  background: -webkit-radial-gradient(circle, #8ca2b250 10%, #8ca2b2 100%);
+  background: -o-radial-gradient(circle, #8ca2b250 10%, #8ca2b2 100%);
+  background: -ms-radial-gradient(circle, #8ca2b250 10%, #8ca2b2 100%);
+  background: radial-gradient( #8ca2b250 10%, #b1c8d0 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a8b755', endColorstr='#94a8b7', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(2) a {
+  background: -moz-radial-gradient(circle, #b1c8d050 10%, #b1c8d0 100%);
+  background: -webkit-radial-gradient(circle, #b1c8d050 10%, #b1c8d0 100%);
+  background: -o-radial-gradient(circle, #b1c8d050 10%, #b1c8d0 100%);
+  background: -ms-radial-gradient(circle, #b1c8d050 10%, #b1c8d0 100%);
+  background: radial-gradient(circle, #b1c8d050 10%, #b1c8d0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='b7ccd3', endColorstr='#ed8588', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(3) a {
+  background: -moz-radial-gradient(circle, #d1d1d350 10%, #d1d1d3 100%);
+  background: -webkit-radial-gradient(circle, #d1d1d350 10%, #d1d1d3 100%);
+  background: -o-radial-gradient(circle, #d1d1d350 10%, #d1d1d3 100%);
+  background: -ms-radial-gradient(circle, #d1d1d350 10%, #d1d1d3 100%);
+  background: radial-gradient(circle, #d1d1d350 10%, #d1d1d3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbdafa', endColorstr='#757575', gradientType=0);
+}
+
+main section#intro div ul li:nth-child(4) a {
+  background: -moz-radial-gradient(circle, #c6bfa550 10%, #c6bfa5 100%);
+  background: -webkit-radial-gradient(circle, #cbdafa #c6bfa550 10%, #c6bfa5 100%);
+  background: -o-radial-gradient(circle, #c6bfa550 10%, #c6bfa5 100%);
+  background: -ms-radial-gradient(circle, #c6bfa550 10%, #c6bfa5 100%);
+  background: radial-gradient(circle, #c6bfa550 10%, #c6bfa5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbdafa', endColorstr='#757575', gradientType=0);
+}
+
+main section#intro div ul li a::before {
+  content: "";
+  display: block;
+  height: 94px;
+  width: 100%;
+  background-image: url(../img/stream.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 33%;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  background-size: contain;
+}
+main section#intro div ul li a:hover::before {
+  /*! content: ""; */
+  
+  height: 50px;
+}
+
+main section#intro div ul li:nth-child(2) a::before {
+  background-image: url(../img/cloud.svg);
+
+}
+
+main section#intro div ul li:nth-child(3) a::before {
+  background-image: url(../img/settings.svg);
+}
+
+main section#intro div ul li:nth-child(4) a::before {
+  background-image: url(../img/podcasts.svg);
+}
+main section#intro div ul li a h3 {
+  content:"";
+  transition: all 0.5s;
+}
+main section#intro div ul li a:hover h3{
+  
+  margin-top: -50px;
+}
+main section#intro div ul li a h3::before{
+  content: ""; 
+  background-color: black;
+  height: 3px;
+  width: 23px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+  margin-top: 10px;
+    
+}
+main section#intro div ul li a:hover h3::before{
+  position: relative;
+  top: 45px;
+}
+main section#intro div ul li a p {
+  display: block;
+  opacity: 0;
+  transition: all 0.5s;
+  font-size: 13px;
+  margin-top: 20px;
+  line-height: 1.4;
+ 
+}
+main section#intro div ul li a:hover p{
+  display: block;
+  opacity: 1;
+}
+
+/* 사회공헌 */
+#society {
+  
+}
+#society .wrap {
+  background-color: #e6efee;
+  padding: 20px;
+  justify-content: space-between;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  background-image: url(../img/roll.png);
+  background-repeat: no-repeat;
+  background-position-x: 31%;
+}
+#society .wrap h2 {
+  
+}
+#society .wrap>p.p {
+  position: absolute;
+  left: 20px;
+  top: 61px;
+  color: #555;
+}
+#society .wrap>p.p span{
+  
+  display: block;
+}
+#society .wrap article {
+  
+}
+#society .wrap article a {
+ 
+}
+#society .wrap article a figure{
+  
+  height: 130px;
+  overflow: hidden;/*  부모영역을 넘쳐나온 컨텐츠를 감춤  */
+  position: relative;
+  top: -5px;
+}
+#society .wrap article a figcaption{
+  
+}
+#society .wrap article a img {
+  
+  width: 100%;
+}
+#society .wrap article a p {
+  
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2;
+}
+#society .wrap article a date {
+  
+  color: #555;
+}
+#news{
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+/* 한진뉴스 */
+
+#news {
+ 
+}
+#news .wrap {
+ 
+}
+#news .wrap h2 {
+ 
+  margin-bottom: 20px;
+}
+#news .wrap ul {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  line-height: 1.5;
+}
+#news .wrap ul li:first-child {
+ 
+  margin-bottom: 30px;
+}
+#news .wrap ul li:first-child a {
+}
+#news .wrap ul li:first-child a figure {
+ 
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+}
+#news .wrap ul li:first-child a figure img {
+ 
+  width: 100%;
+}
+#news .wrap ul li:first-child a figure figcaption {
+ 
+}
+#news .wrap ul li:first-child a h3 {
+ 
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#news .wrap ul li:first-child a p {
+ 
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 62px;
+}
+#news .wrap ul li {
+  width: 500px;
+}
+#news .wrap ul li a {
+ 
+}
+#news .wrap ul li a h3 {
+ 
+}
+#news .wrap ul li a date {
+ 
+}
+/* footer*/
+footer {
+  
+  background-color: #eeeeee;
+}
+footer .wrap {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 1.4;
+  font-size: 16px;
+}
+footer .wrap ul {
+  
+  width: 20%;
+}
+footer .wrap ul li {
+  
+}
+footer .wrap ul li a {
+  
+}
+footer .wrap address {
+  width: 50%;
+}
+footer .wrap select {
+  
+  border: none;
+  border-top: 1px solid #999;
+  background-color: transparent;
+  height: 30px;
+  width: 20%;
+}
+footer .wrap select option {
+  
+}
+footer .wrap p {
+  
+  width: 100%;
+  border-top: 1px solid #999999;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 12px;
+}
