@@ -1,0 +1,99 @@
+#greeting{
+
+}
+/* 페이지 주소 */
+#greeting {
+  
+}
+#greeting nav{
+  margin-top: -50px;
+  background-color: #1a9ec366;
+  position: relative;
+}
+#greeting nav ol{
+  
+  display: flex;
+}
+#greeting nav ol li{
+  text-align: center;
+}
+#greeting nav ol li:first-child{
+  width: 50px;
+  background-color: #097fa4;
+}
+#greeting nav ol li:nth-child(n+2){
+  width: 120px;
+}
+#greeting nav ol li:last-child{
+  line-height: 50px;
+  border-left: 1px solid #eee5;
+  border-right: 1px solid #eee5;
+  color: #fff;
+}
+#greeting nav ol li a{
+  
+  display: block;
+  line-height: 50px;
+  color: #eee;
+}
+#greeting nav ol li:first-child a{
+  
+  background-image: url(../img/home.png);
+  background-repeat: no-repeat;
+  font-size: 0;
+  background-position: center;
+  background-size: 64%;
+  width: 50px;
+}
+#greeting section{
+
+  width: 980px;
+  margin: 0 auto;
+}
+#greeting section div{
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#greeting section div strong{
+
+}
+#greeting section div strong:nth-child(1){
+
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard Std Variable", "Pretendard Std", Pretendard, Roboto, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+#greeting section div strong:nth-child(2){
+
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+#greeting section div strong:nth-child(2)::before{
+  content: "";
+  border-top: 2px solid #00a0c6;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#greeting section div strong span.color{
+
+}
+#greeting section div p{
+
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+#greeting section div p:nth-of-type(n+1):nth-of-type(-n+6){
+  color: #777;
+}
+#greeting p#bread{
+
+}
+#greeting p a{
+
+}

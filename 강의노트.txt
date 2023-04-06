@@ -1,14 +1,14 @@
-웹문서 = html문서 +css언어 +javascript문서
-html = 언어
-hyper
-text
-markup
-language
-(마크업언어:컨텐츠의 의미,역활을 표시한다.)
-- <>로 표기 </>  꺽쇠안에 있는 언어만 표기
-h1 : 제목
-p: 문단,설명 ex <p></p>
-html 문서는 html 언어로 쓰여진 문서, html 언어로 컨텐츠의 의미 역활의 표시한 문서
+ 웹문서 = html문서 +css언어 +javascript문서
+    /html = 언어
+        hyper
+        text
+        markup
+        language
+        (마크업언어:컨텐츠의 의미,역활을 표시한다.)
+        - <>로 표기 </>  꺽쇠안에 있는 언어만 표기
+        h1 : 제목
+        p: 문단,설명 ex <p></p>
+        html 문서는 html 언어로 쓰여진 문서, html 언어로 컨텐츠의 의미 역활의 표시한 문서
 
 /2회차
    
@@ -116,6 +116,7 @@ html 문서는 html 언어로 쓰여진 문서, html 언어로 컨텐츠의 의�
     레이어는 위에서 부터 밑에 쌓인다
     a와b에 포지션을 주면 b부터 앞으로 나온다.
     거기서 z-index: 1; 을 주면 a가 맨 앞으로 나온다.
+    z-index는 무조건 position이있어야 작용된다.
      
     /색상값
     red...
@@ -169,4 +170,43 @@ html 문서는 html 언어로 쓰여진 문서, html 언어로 컨텐츠의 의�
              transition:속성명 초;
              하나밖에 없을때는 all 초s;해주면된다.
  /hover
-   a:hover::before ::before ::after가있다면 앞에 붙여적는다.
+     a:hover::before ::before ::after가있다면 앞에 붙여적는다.
+     main section#intro div ul li a
+     justify-content: space-betweenpadding-top: 20%;
+     padding-bottom: 20px;
+     box-sizing: border-box;
+     하면 중앙 정렬된다.
+ 
+ /position:relative;를 주면 다른것들에게 영향을 주지않고 이동가능
+     애니메이션에 hover에 position:relative;를 줬다면
+     원본에도 position:relative를 줘야한다.
+     다만 hover에는 relative가없어도 작동 한다
+     이유는 본체가 가지고 있는 효과를 상속 받는다.
+ 
+ /transform: translateY(수치값) : 다른 요소에는 영향을 미치지 않고 형태변화시킨다(위치,크기,회전)
+     >> position:relative를 사용하지 않아도 된다.
+     >> 차이점은 position:relative는 위치변화만 가능 (위아래좌우 혹은 앞뒤 z-index)
+         z-index를 쓰려면 꼭 position 속성을 사용해야 한다.
+         단순히 다른 요소에 영향을 주지않고 위치나 크기나 회전등의 형태 변환 할때는 transform 속성을 사용하는게 편하다. 
+ /transform:translateY(-6px) rotate(45deg);/*deg = degree 각도 */
+            앞에 translate를 먼저 주는 이유는 rotate값을 먼저 주면 각도가 먼저 돌아 좌우 상하가 아니라 대각으로 이동된다.
+ /css파일 세분화
+    주의점:모든것이 잘 닫혀있는지 확인할것!!
+ ol태그 순서가 있는 목록
+    oredered list
+ 
+  /box-shadow: X Y 블러 색
+  /text- shadow: X Y 블러 색 ex:text-shadow: 2px 2px 5px #f70000;
+
+  /compay.html에서 그리드사용
+  display: grid
+
+  
+  /:not(:first-child)첫번째것만 빼고 두번째부터 효과가 들어간다.
+  
+  /min-height :최소높이
+  
+ /form태그
+    form>fieldset*2>legend+(label+input)*2
+
+    단독태그는 마지막에 /를 붙여주는것이 좋다.
