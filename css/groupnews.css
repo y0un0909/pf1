@@ -1,0 +1,106 @@
+#groupnews{
+
+}
+#groupnews section div{
+
+}
+#groupnews section div ul{
+  
+  padding-top: 30px;
+}
+#groupnews section div ul li{
+  margin-bottom: 30px;
+}
+#groupnews section div ul li a{
+  
+  display: grid;
+  grid-template-columns: 25% calc(75% - 30px);
+  column-gap: 30px;
+  row-gap: 16px;
+  grid-template-rows: auto 1fr;
+}
+#groupnews section div ul li a figure{
+
+  grid-row: 1 / span 3;
+}
+#groupnews section div ul li a h3{
+  line-height: 1;
+}
+#groupnews section div ul li a p{
+
+
+}
+#groupnews section div ul li a p:nth-of-type(1){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 100px;
+  width: 100%;
+ line-height: 1.4;
+}
+#groupnews section div ul li a p.p{
+
+}
+#groupnews section div ul li a p.date{
+
+}
+#groupnews section div ul li a p.date span{
+  padding-right: 10px;
+}
+#groupnews div form{
+  margin-bottom: 50px;
+  font-size: 0;
+}
+#groupnews div form fieldset{
+  background-color: #f3f5f5;
+  border: 1px solid #ccc;
+  padding: 18px;
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+}
+#groupnews div form fieldset legend{
+
+}
+#groupnews div form fieldset select{
+  padding: 7px;
+}
+#groupnews div form fieldset select:nth-of-type(-n+2){
+  width: calc(50% / 2 - 50% / 8 - 18px / 3 - 24px / 6);
+  border: 1px solid #ccc;
+  background-color: white;
+}
+#groupnews div form fieldset select:nth-of-type(3){
+  width: calc(50% / 4 - 18px / 3 - 24px / 6);
+  border: 1px solid #ccc;
+  background-color: white;
+}
+#groupnews div form fieldset select option{
+
+}
+#groupnews div form fieldset input[type=text]{
+  
+  width: calc(50% / 4 * 3 - 24px / 6);
+  transform: scaleX(98%);
+  transform-origin: 100% 50%;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+#groupnews div form fieldset input[type=submit]{
+  width: calc(50% / 4 - 50% / 12 - 24px / 6);
+  background-color: #00a0c6;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+#groupnews div form fieldset input[type=reset]{
+  
+ 
+  width: calc(50% / 12 - 20px / 6);
+  background-image: url(../img/reset_btn.png);
+  height: 40px;
+  font-size: 0;
+  border: none;
+}

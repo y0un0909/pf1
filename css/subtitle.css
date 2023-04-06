@@ -1,0 +1,52 @@
+#subtitle{
+    
+  height: 351px;
+  background-image: url(../img/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#subtitle .wrap{
+  
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#subtitle .wrap h2{
+    
+  color: white;
+}
+
+#subtitle .wrap button{
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  opacity: 0.6;
+}
+#subtitle .wrap button::before{
+ content: "";
+  border: 3px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  right: -15px;
+ top: calc((100% - 35px) / 2);
+ border-radius: 50%;
+}
+#subtitle .wrap button::after{
+  content: "";
+  border: 3px solid #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 10px;
+  height: 10px;
+  display: inline-block;/*인라인 속성인 수평과 블럭 속성인 너비 지정이 가능하다*/
+  transform:translateY(3px) translateX(1px) rotate(45deg);/*deg = degree 각도 */
+}
