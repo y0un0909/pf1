@@ -89,8 +89,6 @@
   background-color: white;
 }
 #groupnews div form fieldset input[type=submit]{
-
-
   width: calc(50% / 4 - 50% / 12 - 24px / 6);
   background-color: #00a0c6;
   color: white;
