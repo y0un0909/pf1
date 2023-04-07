@@ -18,6 +18,7 @@ main section#intro div ul {
 main section#intro div ul li {
 width: calc(100% / 4 - 60px / 4);
 height: 260px;
+transition: all 0.5s;
 }
 
 main section#intro div ul li a {
@@ -41,6 +42,7 @@ main section#intro div ul li:nth-child(1) a{
  background: -ms-radial-gradient(circle,  #94a8b755 33%, #94a8b7 100%);
  background: radial-gradient(circle, #94a8b755 33%, #94a8b7 100%);	
  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a8b755', endColorstr='#94a8b7', gradientType=0);
+ transition: all 0.5s;
 }
 
 main section#intro div ul li:nth-child(2) a{
@@ -174,20 +176,22 @@ main section#intro div ul li a:hover::after{
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  background-image: url(../img/society-bg.png);
+  background-image: url(../img/roll.png);
   background-repeat: no-repeat;
   background-position-x: 34%;
+  transition: all 0.5s;
 }
 #society .wrap h2 {
   
 }
-#society .wrap>p.p {
+#society .wrap>p.p{
   position: absolute;
   left: 20px;
   top: 61px;
   line-height: 1.4;
   color: black;
 }
+
 #society .wrap article {
   
 }

@@ -207,6 +207,14 @@
   /min-height :최소높이
   
  /form태그
-    form>fieldset*2>legend+(label+input)*2
+    form>fieldset*2>legend+(label+input)*2 혹은 form.search>fildset>legend.hide+(select>option*3)*3+input*3
+    
 
     단독태그는 마지막에 /를 붙여주는것이 좋다.
+
+ /display:flex를 해제하려면 display:block;
+ /width:200px;margin-bottom:100px등의 특정값을 해제하고 꽉차게 하려면 
+ /width:auto;margin-bottom:auto처럼 auto를 사용
+ 
+ /vw 화면크기에 맞춰서 사이즈 자동조절 하는법 height가 예시로 1100px면 vw는 100/1 = 1vw 즉 11px=1vw이다.
+ https://programming119.tistory.com/93
