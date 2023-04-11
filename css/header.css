@@ -6,10 +6,9 @@ body{
   header{
    height: 100px;
     width: 1100px;
-    margin: 0 auto; /* 수평중앙정렬 */
+     /* 수평중앙정렬 */
     display: flex;
     justify-content: space-between;
-    height: 100px;
     align-items: center;
     position: absolute;
     left: calc(50% - 550px);
@@ -39,6 +38,7 @@ div#head{
   }
   header nav{
     display: flex;
+    align-items: center;
   }
   ul{
   }
@@ -86,3 +86,22 @@ div#head{
   li{
     
   }
+.ham{
+  display: none;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  transition: all 0.5s;
+}
+.ham::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+

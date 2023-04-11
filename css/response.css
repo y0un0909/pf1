@@ -1,0 +1,191 @@
+
+/* 테블릿버전 */
+@media screen and (max-width:1024px){
+  header{
+  width: 100%;
+  left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  }
+
+  ul.gnb{ 
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  }
+  ul.etcmenu{
+    
+  position: static;
+  }
+ 
+  main section{
+    
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  main section#intro div ul li{
+    
+  height: 23.63636363636364vw;
+  }
+  main section#intro div ul li a::before{
+    
+  height: 8.545454545454545vw;
+  }
+/*  사회공원  */
+  #society .wrap{
+  background-image: none;
+  }
+/*  그룹사소깃  */
+  #news .wrap ul{
+    
+  display: block;
+  }
+  #news .wrap ul li{
+    
+  width: auto;
+  }
+  #news .wrap ul li:first-child a{
+    
+  display: grid;
+  grid-template-columns: 50% calc(50% - 30px);
+  column-gap: 30px;
+  grid-template-rows: auto 1fr;
+  }
+  #news .wrap ul li:first-child a figure{
+    
+  position: static;
+  width: auto;
+  grid-row: 1 / span 2;
+  }
+  #news .wrap ul li:first-child{
+    
+  margin-bottom: 20px;
+  }
+  #news .wrap ul li:nth-child(n+2){
+    
+  width: auto;
+  }
+}
+/* 모바일버전 */
+/* 헤더영역 */
+@media screen and (max-width:760px){
+  header{
+  width: 100%;
+  left: 0;
+  }
+  header h1{
+  margin: 0 auto;
+  transform: scale(0.9);
+  }
+  header nav>*:not(:last-child){
+  display: none;
+  }
+  .ham{
+  display: block;
+  transform: translateX(-20px);
+  }
+  main section#intro div ul li a p{
+    
+  }
+  /*  타이틀영역  */
+  div#title{   
+  height: 100%;
+  min-height: 440px;
+  }
+  div#title:before{
+  display: none;
+  }
+  div#title p{
+  transform: scale(0.77);
+  top: calc(-16px * 0.77);
+  margin-bottom: calc(30px * 0.77);
+  }
+  /*  내용영역  */
+  main section#intro div ul{
+  flex-wrap: wrap;
+  row-gap: 10px;
+  }
+  main section#intro div ul li{
+  width: calc(100% / 2 - 10px / 2);
+  height: 46.71052631578947vw;
+  }
+  main section#intro div ul li a{
+    
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  }
+  main section#intro div ul li a::before{
+  height: 50px;
+  }
+  #society{
+    
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  #society .wrap{
+    
+  display: block;
+  background-image: none;
+  }
+  #society .wrap h2{
+    
+  }
+  #society .wrap  p.p{
+    
+  position: static;
+  }
+  #society .wrap article{
+    
+  }
+  #society .wrap article a{
+    
+  }
+  /*  한진뉴스  */
+  #news .wrap ul{
+  display: block;
+  }
+  #news .wrap ul li{
+  width: auto;
+  margin-bottom: 15px;
+  }
+  #news .wrap ul li:first-child{
+  margin-bottom: 15px;
+  }
+  #news .wrap ul li:first-child a figure{
+  position: static;
+  width: auto;
+  }
+  #news .wrap ul li:nth-child(n+2){
+  width: auto;
+  }
+  
+  /* comon   */
+  .h1{    
+  font-size: 40px;
+  font-size: calc(50px*0.77);
+  }
+  .h3{
+   
+  font-size: calc(22px * 0.77);
+  }
+  .block{
+    
+  display: inline;
+  }
+  .padding30{
+  padding-top: calc(30px * 0.78);
+  padding-bottom: calc(30px * 0.77);
+  }
+  .wrap{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+

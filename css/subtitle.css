@@ -49,4 +49,35 @@
   height: 10px;
   display: inline-block;/*인라인 속성인 수평과 블럭 속성인 너비 지정이 가능하다*/
   transform:translateY(3px) translateX(1px) rotate(45deg);/*deg = degree 각도 */
+}#subtitle .wrap button.button-left{
+  position: absolute;
+  left: 0;
+  border: none;
+  background-color: transparent;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  opacity: 0.6;
+}
+#subtitle .wrap button.button-left::before{
+ content: "";
+  border: 3px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: -49px;
+ top: calc((100% - 35px) / 2);
+ border-radius: 50%;
+}
+#subtitle .wrap button.button-left::after{
+  content: "";
+  border: 3px solid #fff;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 10px;
+  height: 10px;
+  display: inline-block;/*인라인 속성인 수평과 블럭 속성인 너비 지정이 가능하다*/
+  transform:translateY(3px) translateX(-150px) rotate(-134deg);/*deg = degree 각도 */
 }

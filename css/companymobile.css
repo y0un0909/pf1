@@ -1,0 +1,123 @@
+@media screen and (max-width: 1024px){
+    header{
+      
+    width: 100%;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    }
+    header h1{
+    transform: scale(0.9);
+    }
+    header div#head{
+   
+    position: static;
+    }
+    header nav{
+    
+    }
+    ul.gnb{
+        
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    }
+    ul.etcmenu{
+      
+    position: sticky;
+    }
+    .ham{
+    display: block;
+    }
+    #subtitle .wrap button{
+      
+    transform: translateX(-25px);
+    }
+    #company section{
+      
+    width: calc(100% - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+    #company section div{
+      
+    padding-top: 100px;
+    }
+    #subtitle {
+    min-height: 440px;
+  }
+    /*  하단영역  */
+    footer{
+      
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+  }
+  
+  
+  @media screen and (max-width:760px){
+    header{
+    width: 100%;
+    left: 0;
+    }
+    header h1{
+    
+    margin: 0 auto;
+    transform: scale(0.9);
+    }
+    header div#head{
+   
+    position: static;
+    }
+    
+    
+    header nav>*:not(:last-child){
+    display: none;
+    }
+    header nav:hover ul:first-child{
+      display: block;
+      position: absolute;
+      right:20px;
+      top: 50px;
+      background-color: white;
+    }
+    .ham{
+    
+    display: block;
+    transform: translateX(-20px);
+    }
+    nav:nth-child(n+1) .ham:hover{
+      display: block;
+      position: absolute;
+      right:20px;
+    }
+    #subtitle .wrap button{
+      
+    transform: translateX(-25px);
+    }
+    #company section{
+      
+    width: calc(100% - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+    #company section div{
+      
+    padding-top: 100px;
+    }
+    #subtitle {
+    min-height: 440px;
+  }
+    /*  하단영역  */
+    footer{
+      
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+  }
+  

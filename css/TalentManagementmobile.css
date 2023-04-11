@@ -1,0 +1,67 @@
+@media screen and (max-width: 760px){
+     header{
+    width: 100%;
+    left: 0;
+    }
+    header h1{
+    
+    margin: 0 auto;
+    transform: scale(0.9);
+    }
+    header h1 a{
+    background-image: url(../img/mo.png);
+    width: 230px;
+    height: 25px;
+    display: block;
+    font-size: 0;
+  }
+    header div#head{
+   
+    position: static;
+    }
+    
+    
+    header nav>*:not(:last-child){
+    display: none;
+    }
+   
+    .ham{
+    display: block;
+    transform: translateX(-20px);
+    }
+
+    #subtitle .wrap button{
+      
+    transform: translateX(-25px);
+    }
+    #subtitle .wrap button.button-left{
+        
+    left: 78px;
+    }
+    #subtitle .wrap button.button-left::before{
+    }
+    section.wrap{
+        
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+    .grid{    
+    display: block;
+    }
+    h4.h4{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    }
+    #ulul{    
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    }
+      /*  하단영역  */
+    footer{
+      
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+}

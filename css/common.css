@@ -5,6 +5,7 @@
 .padding30{
     padding-top: 30px;
     padding-bottom: 30px;
+    transition: all 0.5s;
 }
 .padding100{
     padding-top: 100px;
@@ -12,7 +13,7 @@
     padding-top: 60px;
 }
 .wrap{
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 .hide{
@@ -26,6 +27,7 @@
 }
 .h1{
     font-size: 50px;
+    transition: all 0.5s;
 }
 .h2{
     font-size: 40px;
@@ -92,3 +94,14 @@ img{
   background-repeat: no-repeat;
   background-position: center;
   }
+  .ham{
+    display: none;
+}
+.left{content: "";
+border: 3px solid #fff;
+border-left-color: transparent;
+border-bottom-color: transparent;
+width: 10px;
+height: 10px;
+display: inline-block;
+transform: translateY(3px) translateX(1px) rotate(45deg);}
