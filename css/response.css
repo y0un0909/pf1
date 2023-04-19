@@ -1,6 +1,5 @@
-
-/* 테블릿버전 */
-@media screen and (max-width:1024px){
+/* 태블릿 버전 */
+@media screen and (max-width:1200px){
   header{
   width: 100%;
   left: auto;
@@ -8,184 +7,248 @@
   padding-right: 10px;
   box-sizing: border-box;
   }
-
-  ul.gnb{ 
+  /*  서브타이틀  */
+  #subtitle .wrap button{
+  right: 36px;
+  }
+  ul.gnb{
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -12px;
   width: 100%;
   justify-content: center;
-  align-items: center;
   border: none;
   }
   ul.etcmenu{
-    
   position: static;
   }
- 
+  /*  타이틀영역  */
+  
   main section{
-    
-  padding-left: 10px;
-  padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   main section#intro div ul li{
-    
   height: 23.63636363636364vw;
   }
   main section#intro div ul li a::before{
-    
   height: 8.545454545454545vw;
   }
-/*  사회공원  */
+  /*  사회공헌  */
   #society .wrap{
   background-image: none;
   }
-/*  그룹사소깃  */
+  /* 그룹사소식   */
   #news .wrap ul{
-    
   display: block;
   }
   #news .wrap ul li{
-    
   width: auto;
   }
-  #news .wrap ul li:first-child a{
-    
-  display: grid;
-  grid-template-columns: 50% calc(50% - 30px);
-  column-gap: 30px;
-  grid-template-rows: auto 1fr;
+  #news .wrap ul li:nth-child(n+2){
+  width: auto;
+  }
+  #news .wrap ul li:first-child{
+    margin-bottom: 20px;
   }
   #news .wrap ul li:first-child a figure{
-    
   position: static;
   width: auto;
   grid-row: 1 / span 2;
   }
-  #news .wrap ul li:first-child{
-    
-  margin-bottom: 20px;
+  
+  #news .wrap ul li:first-child a{
+  display: grid;
+  grid-template-columns: 50% calc(50% - 30px);
+  column-gap: 30px;
+  align-items: start;
+  align-content: start;
+  grid-template-rows: auto 1fr;
   }
-  #news .wrap ul li:nth-child(n+2){
-    
-  width: auto;
+  #news .wrap ul li:not(:first-child) a{
+    display: flex;
+    justify-content: space-between;
+  }
+  /*  하단영역  */
+  footer .wrap{
+  padding-left: 10px;
+  padding-right: 10px;
   }
 }
 /* 모바일버전 */
-/* 헤더영역 */
-@media screen and (max-width:760px){
+@media screen and (max-width:768px){ /*max-width:760px는 너비가 760이하일때,최대너비가 760일때*/
+  /* 헤더영역   */
   header{
-  width: 100%;
-  left: 0;
+    width: 100%;
+    left: 0;
   }
   header h1{
-  margin: 0 auto;
-  transform: scale(0.9);
+    margin: 0 auto;
+    transform: scale(0.65);
+  }
+  header h1 a{
+  background-image: url(../img/hj_logo.png);
   }
   header nav>*:not(:last-child){
-  display: none;
+    display: none;
   }
   .ham{
-  display: block;
-  transform: translateX(-20px);
+    display: block;
+    transform: translateX(-20px);
   }
-  main section#intro div ul li a p{
-    
+  /*   타이틀영역   */
+  div#title{
+    height: 100%;
+    min-height: 440px;
   }
-  /*  타이틀영역  */
-  div#title{   
-  height: 100%;
-  min-height: 440px;
-  }
-  div#title:before{
-  display: none;
+  div#title::before{
+    display: none;
   }
   div#title p{
   transform: scale(0.77);
   top: calc(-16px * 0.77);
   margin-bottom: calc(30px * 0.77);
   }
-  /*  내용영역  */
+  div#title a{
+  transform: scale(0.77);
+  }
+  /* 서브타일틀   */
+  #subtitle .wrap{
+  flex-direction: column;
+  row-gap: 20px;
+  }
+  #subtitle .wrap button{
+  position: static;
+  justify-content: center;
+  }
+  #subtitle .wrap button::before{
+    display: none;
+  }
+  #subtitle .wrap button::after{
+  transform: translateY(0px) rotate(45deg);
+  }
+  /* 내용영역   */
+  main>nav{
+   display: none;
+  }
+  main section>div{
+  padding-top: calc(100px * 0.77) !important;
+  padding-bottom: calc(100px * 0.77) !important;
+  }
   main section#intro div ul{
   flex-wrap: wrap;
   row-gap: 10px;
+  column-gap: 10px;
   }
   main section#intro div ul li{
-  width: calc(100% / 2 - 10px / 2);
+  min-width: calc(100% / 2 - 10px / 2);
   height: 46.71052631578947vw;
   }
   main section#intro div ul li a{
-    
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
   }
   main section#intro div ul li a::before{
-  height: 50px;
+    height: 50px;
   }
+  main section#intro div ul li a p{
+  }
+  /*  사회공헌  */
   #society{
-    
-  padding-left: 10px;
-  padding-right: 10px;
+    padding-left: 10px;
+    padding-right:10px; 
   }
   #society .wrap{
-    
-  display: block;
-  background-image: none;
+    display: block;
+    background-image: none;
   }
-  #society .wrap h2{
-    
-  }
-  #society .wrap  p.p{
-    
-  position: static;
-  }
-  #society .wrap article{
-    
-  }
-  #society .wrap article a{
-    
+  #society .wrap > p.p{
+    position: static;
   }
   /*  한진뉴스  */
   #news .wrap ul{
-  display: block;
+    display: block;
   }
   #news .wrap ul li{
-  width: auto;
-  margin-bottom: 15px;
+    width: auto;
+    margin-bottom: 20px;
   }
   #news .wrap ul li:first-child{
-  margin-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  #news .wrap ul li:first-child a{
+  display: block;
   }
   #news .wrap ul li:first-child a figure{
-  position: static;
-  width: auto;
+    position: static;
+    width: auto;
   }
   #news .wrap ul li:nth-child(n+2){
+    width: auto;
+  }
+  #greeting section div strong{
+    display: block;
+  }
+  #greeting section div strong:nth-child(2){
+    line-height: 1.4;
+  }
+  /* 회사소개   */
+  #company section div strong:nth-child(1){
+    display: block;
+  }
+  #company section div ul{
+  gap: initial;
+  }
+  #company section div ul li{
+  display: block;
   width: auto;
   }
-  
-  /* comon   */
-  .h1{    
-  font-size: 40px;
-  font-size: calc(50px*0.77);
+  /* 하단영역 */
+  footer .wrap{
+  display: block;
   }
+  footer .wrap ul{
+    
+  display: flex;
+  column-gap: 12px;
+  margin-bottom: 12px;
+  }
+  footer .wrap address{
+    width: auto;
+  }
+  footer .wrap address span{
+    display: inline;
+  }
+  footer .wrap select{
+  width: auto;
+  margin-top: 19px;
+  }
+  /*  common  */
+  .wrap{
+    padding-left: 10px ;
+    padding-right: 10px ;
+  }
+  .h1{
+    font-size: calc(50px * 0.77);
+  }
+  .h2 {
+    font-size: calc(40px * 0.77);
+    }
   .h3{
-   
-  font-size: calc(22px * 0.77);
+    font-size: calc(23px * 0.77);
+  }
+  .padding30 {
+    padding-top: calc(30px * 0.77);
+    padding-bottom: calc(30px * 0.77);
   }
   .block{
-    
-  display: inline;
+  display: initial;
   }
-  .padding30{
-  padding-top: calc(30px * 0.78);
-  padding-bottom: calc(30px * 0.77);
-  }
-  .wrap{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  
 }
+
+
+
 
 

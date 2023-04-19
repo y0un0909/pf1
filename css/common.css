@@ -1,91 +1,87 @@
 .margin30{
-    padding-top: 30px;
-    padding-bottom: 30px;
+ margin-top:30px; 
+ margin-bottom:30px; 
 }
 .padding30{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    transition: all 0.5s;
+ padding-top:30px; 
+ padding-bottom:30px; 
+ transition: all 0.5s;
 }
 .padding100{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-top: 60px;
+ padding-top:100px; 
+ padding-bottom:100px;  
+ padding-top: 60px;
 }
 .wrap{
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .hide{
-    display: none;
+  display: none;
 }
 .block{
-    display: block;
+  display: block;
 }
 .textcenter{
-    text-align: center;
+  text-align: center;
 }
 .h1{
-    font-size: 50px;
-    transition: all 0.5s;
+  font-size: 50px;
+  transition: all 0.5s;
 }
 .h2{
-    font-size: 40px;
+  font-size: 40px;
 }
 .h3{
-    font-size: 22px;
+  font-size: 23px;
 }
 .h4{
-    font-size:20px;
-}
-.bold{
-    font-weight: bold;
+  font-size: 20px;
 }
 .p{
-    font-size: 14px;
+  font-size: 14px;
 }
-.color{
-    color: #00a0c6;
-}
-.ccc{
-    color: #555;
-}
-.bordertop{
-    border-top: 3px solid #00a0c6 !important;
-}
-.flex{
-    display: flex;
-}
-img{
-    width: 100%      
+.bold{
+  font-weight: bold;
 }
 .blue{
-   color: #00a0c6;
+  color:#00a0c6;
+}
+.ccc{
+  color:#555;
+}
+.bordertop{
+  border-top: 3px solid #33b6ea !important;
+}
+.flex{
+  display: flex;
+}
+img{
+  width: 100%;
 }
 .breadcrumb{
-    background-color: #0a92bdaa;
-    margin-top: -50px;
-    position: relative;
-  }
+  background-color: #0a92bdaa;
+  margin-top: -50px;
+  position: relative;
+}
 .breadcrumb ol li{
-   text-align: center;
+  text-align: center;
 }
 .breadcrumb ol li:first-child{
-   width: 50px;
-   background-color: #097fa4;
+  width: 50px;
+  background-color: #097fa4;
 }
 .breadcrumb ol li:not(:nth-child(1)){
+  width: 180px;
   line-height: 50px;
-  border-left: 1px solid #eeeeee55;
   border-right: 1px solid #eee5;
   color:#fff;
-  width: 180px;
-  }
+}
 .breadcrumb ol li a{
   display: block;
   line-height: 50px;
   color: #eee;
-  }
+}
 .breadcrumb ol li:first-child a{
   font-size: 0;
   width: 50px;
@@ -93,15 +89,7 @@ img{
   background-size: 64%;
   background-repeat: no-repeat;
   background-position: center;
-  }
-  .ham{
-    display: none;
 }
-.left{content: "";
-border: 3px solid #fff;
-border-left-color: transparent;
-border-bottom-color: transparent;
-width: 10px;
-height: 10px;
-display: inline-block;
-transform: translateY(3px) translateX(1px) rotate(45deg);}
+.opacity30{
+  opacity: 0.3;
+}

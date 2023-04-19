@@ -1,106 +1,96 @@
-#groupnews{
+#groupsnews{
 
 }
-#groupnews section div{
-
-}
-#groupnews section div ul{
-  
-  padding-top: 30px;
-}
-#groupnews section div ul li{
-  margin-bottom: 30px;
-}
-#groupnews section div ul li a{
-  
-  display: grid;
-  grid-template-columns: 25% calc(75% - 30px);
-  column-gap: 30px;
-  row-gap: 16px;
-  grid-template-rows: auto 1fr;
-}
-#groupnews section div ul li a figure{
-
-  grid-row: 1 / span 3;
-}
-#groupnews section div ul li a h3{
-  line-height: 1;
-}
-#groupnews section div ul li a p{
-
-
-}
-#groupnews section div ul li a p:nth-of-type(1){
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  height: 100px;
-  width: 100%;
- line-height: 1.4;
-}
-#groupnews section div ul li a p.p{
-
-}
-#groupnews section div ul li a p.date{
-
-}
-#groupnews section div ul li a p.date span{
-  padding-right: 10px;
-}
-#groupnews div form{
+#groupsnews form{
   margin-bottom: 50px;
   font-size: 0;
 }
-#groupnews div form fieldset{
-  background-color: #f3f5f5;
+#groupsnews form fieldset{
+  background-color: #eee;
   border: 1px solid #ccc;
   padding: 18px;
   display: flex;
   gap: 4px;
   justify-content: space-between;
 }
-#groupnews div form fieldset legend{
+#groupsnews form fieldset>*{
+}
+#groupsnews form fieldset legend{
 
 }
-#groupnews div form fieldset select{
-  padding: 7px;
+#groupsnews form fieldset select{
+padding: 7px;
+background-color: white;
+border: 1px solid #ccc;
 }
-#groupnews div form fieldset select:nth-of-type(-n+2){
-  width: calc(50% / 2 - 50% / 8 - 18px / 3 - 24px / 6);
-  border: 1px solid #ccc;
-  background-color: white;
+#groupsnews form fieldset select:nth-of-type(-n+2){
+  width: calc(50% / 2 - 50% / 8 - 18px / 3 - 20px / 6 );
 }
-#groupnews div form fieldset select:nth-of-type(3){
-  width: calc(50% / 4 - 18px / 3 - 24px / 6);
-  border: 1px solid #ccc;
-  background-color: white;
+#groupsnews form fieldset select:nth-of-type(3){
+  width: calc(50% / 4 - 18px / 3 - 20px / 6 );
 }
-#groupnews div form fieldset select option{
+#groupsnews form fieldset select option{
 
 }
-#groupnews div form fieldset input[type=text]{
+#groupsnews form fieldset input:nth-of-type(-n+2){
   
-  width: calc(50% / 4 * 3 - 24px / 6);
+}
+#groupsnews form fieldset input[type="text"]{
+  width: calc(50% / 4 * 3 - 20px / 6 );
   transform: scaleX(98%);
   transform-origin: 100% 50%;
-  border: 1px solid #ccc;
   background-color: white;
+  border: 1px solid #ccc;
+  padding-left: 7px;
+  box-sizing: border-box;
 }
-#groupnews div form fieldset input[type=submit]{
-  width: calc(50% / 4 - 50% / 12 - 24px / 6);
+#groupsnews form fieldset input[type="submit"]{
+  width: calc(50% / 4 - 50% / 12 - 20px / 6);
+  border: none;
   background-color: #00a0c6;
   color: white;
-  border: none;
-  font-weight: bold;
 }
-#groupnews div form fieldset input[type=reset]{
-  
- 
-  width: calc(50% / 12 - 20px / 6);
-  background-image: url(../img/reset_btn.png);
-  height: 40px;
+#groupsnews form fieldset input[type="reset"]{
+  width: calc(50% / 12 - 20px / 6 );
+  background-color: #767676;
   font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 57%;
   border: none;
+  background-image: url(../img/refresh-outline.svg);
+}
+#groupsnews ul{
+  padding-top: 30px;
+}
+#groupsnews ul li{
+  margin-bottom: 40px;
+}
+#groupsnews ul li a{
+  display: grid;
+  grid-template-columns: 25% calc(75% - 30px);
+  column-gap: 30px;
+  row-gap: 16px;
+  grid-template-rows: auto 1fr;
+}
+#groupsnews ul li a figure{
+  grid-row: 1 / span 3;
+}
+#groupsnews ul li a h3{    
+  line-height: 1;
+}
+#groupsnews ul li a p{
+    line-height: 1.5;
+}
+#groupsnews ul li a p:nth-of-type(1){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+#groupsnews ul li a p.date{
+    
 }

@@ -1,138 +1,80 @@
-div.wrap .button-left{
+#TalentManagement {
     
-}
-div.wrap .button-left::before{
-    content: "";
-     border: 3px solid #fff;
-     width: 30px;
-     height: 30px;
-     display: block;
-     position: absolute;
-     right: -15px;
-    top: calc((100% - 35px) / 2);
-    border-radius: 50%;
-   }
-div.wrap .button-left::after{
-     content: "";
-     border: 3px solid #fff;
-     border-left-color: transparent;
-     border-bottom-color: transparent;
-     width: 10px;
-     height: 10px;
-     display: inline-block;
-     transform:translateY(3px) translateX(1px) rotate(45deg);
-   }
-h1{
-
-    margin-bottom: 30px;
-}
-p.ccc{
-
-    margin-bottom: 30px;
-}
-.grid{
-display: grid;
-column-gap: 50px;
-justify-content: start;
-align-items: start;
-grid-template-rows: 90px auto;
-border: 1px solid #ccc;
-}
-figure{
-
-    grid-row: 1 / span 2;
-}
-img{
-    width:100%;
-}
-ul{
-
-}
-#ulul{
-
-}
-#ulul li{
-
-    line-height: 1.5;
-}
-li{
-
-}
-#ulul li:before{
-    content: "";
-    background-color: #ccc;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin-right: 10px;
-}
-h2{
-}
-.padding{
+  }
+  #TalentManagement section {
     
-    margin-top: 100px;
-    margin-bottom: 80px;
-}
-.padding:after{
-    content: "";
-    width: 500px;
-    height: 1px;
-    display: block;
-    background-color: #666;
-   margin: 0 auto;
-   
-    position: absolute;
-    margin-top: 60px;
-}
-}
-
-.respect h3{
-}
-.respect h3:after{
-    content: "";
-    width: 500px;
-    height: 1px;
-    display: block;
-    background-color: #666;
-   margin: 0 auto;
-    margin-top: 200px;
-}
-.respect span{
+  }
+  #TalentManagement section .wrap {
     
-    height: 16px;
-}
-.respect p{
+  }
+  #TalentManagement section .wrap h3:nth-of-type(1) {
+  margin-bottom: 40px;
+  }
+  #TalentManagement section .wrap > p {
+  margin-bottom: 20px;
+  }
+  #TalentManagement section .wrap div {
+  display: grid;
+  grid-template-columns: 50% calc(50% - 30px);
+  grid-template-rows: auto;
+  column-gap: 30px;
+  height: 350px;
+  align-content: center;
 
-    line-height: 1.5;
-    width: calc(100% - 200px);
-}
-
-.up{
-
-}
-.up h4{
-
-    width: 200px;
-    font-size: 30px;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-.up span{
+  border: 1px solid #ccc;
+  padding-right: 30px;
+ }
+  #TalentManagement section .wrap div figure {
+  grid-row: 1 / span 6;
+  /*! height: 200px; */
+  /*! width: 275px; */
+  width: 50%;
+  height: 50%;
+  }
+  #TalentManagement section .wrap div figure img {
+  transform: scale(2);
+  transform-origin: 0 50%;
+  }
+  #TalentManagement section .wrap div h4 {
     
-    height: 16px;
-}
-.up p{
-
-    width: calc(100% - 200px);
-    line-height: 1.5;
-}
-h4.h4{
+  }
+  #TalentManagement section .wrap div p {
     
-    grid-column: 2 / span 1;
-    margin-top: 60px;
-}
-.h5{
-    font-size: 30px;
-    width: 200px;
-}
+  }
+  #TalentManagement section .wrap div p span {
+  display: initial;
+  }
+  #TalentManagement section .wrap h3:nth-of-type(2) {
+  margin: 70px 0 40px;
+  }
+  #TalentManagement section .wrap ul {
+    
+  }
+  #TalentManagement section .wrap ul li {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: auto 1fr;
+  line-height: 1.4;
+  margin-bottom:40px;
+  }
+  #TalentManagement section .wrap ul li::before{
+   content: "";
+   display: block;
+   width: 30%;
+   border-top:2px solid blue; 
+   grid-column: 1 / span 2; 
+   margin-bottom:20px; 
+  }
+  #TalentManagement section .wrap ul li h4 {
+  grid-row: 2 / span 4;
+  align-self: center;
+  }
+  #TalentManagement section .wrap ul li h4 span {
+    
+  }
+  #TalentManagement section .wrap ul li p {
+    
+  }
+  #TalentManagement section .wrap ul li:nth-child(1) p:nth-of-type(2){
+  margin-bottom:20px;
+  }

@@ -1,0 +1,16 @@
+#c{
+/*   color: black; */
+}
+body .h{ /* 같은 클래스라하더라도 좀더 경로가 구체적인것이 우선한다 */
+  color: blue;
+}
+.g{
+  color: orange;
+}
+h1{
+  color:green;
+  
+}
+body{
+  color: red  ;
+}

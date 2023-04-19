@@ -4,30 +4,22 @@ body{
   }
   /* 상단영역 */
   header{
-   height: 100px;
-    width: 1100px;
-     /* 수평중앙정렬 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: calc(50% - 550px);
-    z-index: 1;
-  }
-div#head{
-   width: 1100px;
+    width: 100%;
     margin: 0 auto; /* 수평중앙정렬 */
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
     position: absolute;
-    left: calc(50% - 550px);
-    z-index: 1;
-}
-
+    left: 0;
+    z-index: 2;
+    transition: all 0.5s;
+    padding: 0 calc((100% - 1100px) / 2);
+    box-sizing: border-box;
+  }
   header h1{
-   
+  position: relative;
+  z-index: 1;
   }
   header h1 a{
     background-image: url(../img/hj_logo.jpg);
@@ -46,24 +38,136 @@ div#head{
     border-top: 1px solid #8080807a;
     display: flex;
   }
-  ul.gnb li{ /*클래스명이gnb인ul 아래에 위치한(있는) li*/
+  ul.gnb>li{ /*클래스명이gnb인ul 아래에 위치한(있는) li*/
             /* 경기도 인천시 부평구 */    
     margin-top: -1px;
   }
-  ul.gnb li a{
+  ul.gnb>li h2{
+  position: relative;
+  z-index: 1;
+  }
+  ul.gnb>li h2:hover{
+    
+  }
+  ul.gnb>li h2 a{
     padding: 10px 30px;
     display: block;
     border-top: 2px solid transparent;
     transition: border 1s;
   }
-  ul.gnb li a:hover{
+  ul.gnb > li:hover h2 a{
     color:red;
     border-top: 2px solid blue;
   }
+/* 서브메뉴 */
+  ul.submenu{
+  position: absolute;
+  left: 0;
+  background-color: white;
+  column-gap: 50px;
+  letter-spacing: 1px;
+  line-height: 2;
+  height: 340px;
+  width: 100%;
+  padding: 15px calc((100% - 1100px) / 2);
+  box-sizing: border-box;
+  display: none;
+  justify-content: end;
+  top: 0;
+  padding-top: 85px;
+  height: auto;
+  transition: all 0.5s;
+  box-shadow: 0px 2px 16px #ccc;
+  }
+  ul.gnb > li:not(:first-child) ul.submenu{
+    display: none;
+  }
+  .submenushow{
+    display: flex !important;
+    }
+  .submenuani{
+    animation-name: submenuani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes submenuani{
+    0%{
+      transform: translateY(-30px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+  .submenuup{
+    display: flex !important;
+    animation-name:submenuup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+    }
+  @keyframes submenuup{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100%{
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+  }
+  li:nth-child(2) ul.submenu{
+    justify-content: center;
+    padding-left: 800px;
+  }
+  ul.submenu>li{
+    
+  }
+ul.submenu>li:nth-child(3){
+  margin-right: -30px;
+}
+ul.submenu>li:nth-child(5){
+  margin-right: -50px;
+}
+  ul.submenu>li h3{
+    
+  }
+  ul.submenu>li h3 a{
+  color: #00a0c6;
+  font-size: 17px;
+  }
+ul.submenu .close{
+  position: absolute;
+  bottom: 15px;
+  right: calc((100% - 1100px) / 2);
+  cursor: pointer;/*    커서의모양을 손형태로 */
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 0;
+  background-image: url(../img/close.svg);
+  background-size: 60%; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  ul.submenu>li ul.sublist{
+  /*! position: absolute; */
+  }
+  ul.submenu>li ul.sublist li{
+    
+  }
+  ul.submenu>li ul.sublist li a{
+ 
+  }
+  ul.submenu>li ul.sublist li a:hover{
+  text-decoration: underline;
+  text-decoration-color: #999;
+  }
+  
   ul.etcmenu{
     position: absolute;
     top: 8px;
-    right: 0px;
+    right: calc((100% - 1100px) / 2);
     display:flex;
   }
   ul.etcmenu li{
@@ -83,25 +187,20 @@ div#head{
     font-size: 7px;
     vertical-align: 2px; /* vertical-align 글자수직정렬 */
   }
-  li{
-    
-  }
 .ham{
-  display: none;
+  /*! display: block; */
   font-size: 0;
   border: none;
   background-color: transparent;
   width: 20px;
   height: 20px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-  transition: all 0.5s;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #FFF;
 }
 .ham::before{
   content: "";
-  display: block;
   width: 100%;
+  display: block;
   height: 2px;
-  background-color: white;
+  background-color: #fff;
 }
-

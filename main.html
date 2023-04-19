@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)한진칼</title>
+    <title>(주)한진칼-PF1</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/response.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script type="text/javascript" src="js/submenu.js"></script>
 </head>
 <body>
     <!-- 상단영역 마크업주석  -->
@@ -23,17 +25,162 @@
         <h1><a href="main.html">HANJIN KAL</a></h1>
         <nav>
             <ul class="gnb">
-                <li><a href="greeting.html">한진그룹</a></li>
-                <li><a href="company.html">한진칼</a></li>
-                <li><a href="governace.html">ESG경영</a></li>
-                <li><a href="people.html">한진인</a></li>
-                <li><a href="groupnews.html">홍보센타</a></li>
+                <li>
+                    <h2><a href="#">한진그룹</a></h2>
+                    <ul class="submenu flex">
+                        <li>
+                            <h3 class="h5 blue"><a href="greeting.html" class="block">인사말씀</a></h3>
+                            <ul class="sublist">
+                                <li class="opacity30"><a href="greeting.html" class="block">인사말씀</a></li>
+                                <li class="opacity30"><a href="" class="block">경영철학 </a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">그룹역사</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">한진70년</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">창업회장관</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">정석 조중훈</a></li>
+                                <li><a href="" class="block">사업은 예술이다</a></li>
+                                <li><a href="" class="block">전기 다운로드</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">한진의미래</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">한진네트워크</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">지주회사</a></li>
+                                <li><a href="" class="block">항공부문</a></li>
+                                <li><a href="" class="block">육운부문</a></li>
+                                <li><a href="" class="block">관광/호텔/부동산부문</a></li>
+                                <li><a href="" class="block">정보서비스부문</a></li>
+                                <li><a href="" class="block">비영리법인부문</a></li>
+                                <li><a href="" class="block">해외법인부문</a></li>
+                                <li><a href="" class="block">글로벌네트워크</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">Contact Us</a></h3>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">한진칼</a></h2>
+                    <ul class="submenu flex">
+                        <li>
+                            <h3 class="h5 blue"><a href="company.html" class="block">회사 소개</a></h3>
+                            <ul class="sublist">
+                                <li class="opacity30"><a href="company.html" class="block">기업개요</a></li>
+                                <li class="opacity30"><a href="" class="block">연혁</a></li>
+                                <li class="opacity30"><a href="" class="block">CI</a></li>
+                                <li class="opacity30"><a href="" class="block">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">투자자정보</a></h3>
+                            <ul class="sublist">
+                                <li ><a href="" class="block">재무정보</a></li>
+                                <li><a href="" class="block">주식정보</a></li>
+                                <li><a href="" class="block">IR자료실</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">ESG경영</a></h2>
+                    <ul class="submenu flex">
+                        <li>
+                            <h3 class="h5 blue"><a href="governance.html" class="block">지속가능경영</a></h3>
+                            <ul class="sublist">
+                                <li class="opacity30"><a href="governance.html" class="block">윤리경영</a></li>
+                                <li class="opacity30"><a href="" class="block">인재경영</a></li>
+                                <li class="opacity30"><a href="" class="block">안전경영</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">기업지배구조</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">기업지배구조헌장</a></li>
+                                <li><a href="" class="block">이사회</a></li>
+                                <li><a href="" class="block">위원회</a></li>
+                                <li><a href="" class="block">정관</a></li>
+                                <li><a href="" class="block">기타 관련 정보</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">사회공헌</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">나눔경영</a></li>
+                                <li><a href="" class="block">상생경영</a></li>
+                                <li><a href="" class="block">육영사업</a></li>
+                                <li><a href="" class="block">의료복지</a></li>
+                                <li><a href="" class="block">활동소식</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">환경경영</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">기후변화 대응</a></li>
+                                <li><a href="" class="block">친환경 경영</a></li>
+                                <li><a href="" class="block">활동소식</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2><a href="#">한진인</a></h2>
+                    <ul class="submenu flex">
+                        <li>
+                            <h3 class="h5 blue"><a href="people.html" class="block">한진의 인재상</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">인재육성</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">인사제도</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">복리후생</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">채용정보</a></h3>
+                        </li>
+                    </ul>
+
+                </li>
+                <li>
+                    <h2><a href="#">홍보센타</a></h2>
+                    <ul class="submenu flex">
+                        <li>
+                            <h3 class="h5 blue"><a href="groupnews.html" class="block">그룹사소식</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">광고모음</a></h3>
+                            <ul class="sublist">
+                                <li><a href="" class="block">광고영상</a></li>
+                                <li><a href="" class="block">지면광고</a></li>
+                            </ul>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">정기간행물</a></h3>
+                        </li>
+                        <li class="opacity30">
+                            <h3 class="h5 blue"><a href="" class="block">한진그룹 SNS</a></h3>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <ul class="etcmenu">
-                <li><a href="">전체메뉴</a></li>
-                <li><a href="">ENGLISH</a></li>
+                <li><a href="#">전체메뉴</a></li>
+                <li><a href="#">ENGLISH</a></li>
+                <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
             </ul>
-            <button class="hide ham">전체메뉴보기</button>
         </nav>
     </header>
     <!-- 타이틀영역 -->
@@ -45,14 +192,14 @@
     <!-- 메인영역 -->
     <main>
         <!-- 한진소개 -->
-        <section id="intro"class="padding30">
+        <section id="intro" class="padding30">
             <div class="wrap">
                 <h2>한진소개</h2>
                 <ul>
                     <li>
                         <a href="">
                             <h3 class="h3"> 한진네트워크</h3>
-                            <p class="textcenter hide">무한하고 독창적인 <span class="block"></span> 가치를 지닌 기업</p>
+                            <p class="textcenter hide">무한하고 독창적인 <span class="block"></span>가치를 지닌 기업</p>
                         </a>
                     </li>
                     <li>
@@ -73,27 +220,25 @@
                             <p class="textcenter hide">한진과 소통을 위한<span class="block"></span> SNS채널 운영</p>
                         </a>
                     </li>
-                    
                 </ul>
             </div>
         </section>
-       <!-- 사회공헌 -->
-       <section id="society"class="padding30">
-        <div class="wrap">
-            <h2 class="h3">사회공원</h2>
-            <p class="p ccc">작은 실천을 큰 사랑으로<Span class="block"></Span> 더 따뜻하고 아름다운 세상을<Span class="block"></Span> 꿈꿉니다</p>
-            <article>
-                <a href="" class="block">
-                    <figure>
-                        <img src="img/s1.jpg" alt="487 * 150 size image">
-                        <figcaption class="hide">경찰이 호프테이프가 감긴 상자를 주는중</figcaption>
-                    </figure>
-                    
-                    <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
-                    <date class="p ccc">2021-05-25</date>
-                </a>
-            </article>
-        </div>
+        <!-- 사회공헌 -->
+        <section id="society" class="padding30">
+            <div class="wrap">
+                <h2 class="h3">사회공원</h2>
+                <p class="p ccc">작은 실천을 큰 사랑으로<span class="block"></span> 더 따뜻하고 아름다운 세상을<span class="block"></span> 꿈꿉니다</p>
+                <article>
+                    <a href="" class="block">
+                        <figure>
+                            <img src="img/s1.jpg" alt="487 * 150 size image">
+                            <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                        </figure>
+                        <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                        <date class="p ccc">2021-05-25</date>
+                    </a>
+                </article>
+            </div>
         </section>
         <!-- 한진뉴스 -->
         <section id="news" class="padding30">
@@ -103,11 +248,11 @@
                     <li>
                         <a href="" class="block">
                             <figure>
-                                <img src="img/new1.png" alt="">
-                                <figcaption class="hide">택배 터미널 직접 점검 실시</figcaption>
+                                <img src="img/n1.jpg" alt="">
+                                <figcaption class="hide">택배터미널방점검사진</figcaption>
                             </figure>
                             <h3 class="h4">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시</h3>
-                            <p class="p">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시⊙설 특수기 기간 물량 증가하는 허브 터미널에 조현민∙노삼석 사장 방문하여 집중 점검⊙현장 종사자에 안전보건관리 주의 당부 및 노고 격려 위한 격려품 전달㈜한진이 설 명절을 대비해 현장의 안전보건관리 점검과 고객 서비스에 차질이 없도록 택배터미널 현장점검을 실시했다.이번 점검은 지난 25일부터 26일까지 양일간 ㈜한진 노삼석 대표이사 사장, 조현민 미래성장전략 및 마케팅 총괄 사장이 설 특수기 기간 동안 물량이 증가하는 한진택배 동서울 허브 터미널, 대전 허브 터미널 등 주요 택배터미널을 직접 방문해 집중 점검을 진행했다.설 특수기 기간 동안 각 터미널의 주/야간 작업 상황을 확인하고, 휠소터 등 분류시설 점검, 현장 종사자 편의시설, 통제실 근무 상황 등 모든 작업장을 면밀히 살피며 안전보건관리에 대한 각별한 주의를 당부했다.특히, 택배기사 근로조건 개선을 위한 분류 인력 투입 현황, 심야배송 중단 이행 상황 등 택배기사와의 상생을 실천할 수 있도록 당부하며, 조업 인력들의 안전보건 관리사항 등 현장 종사자들을 위한 점검을 진행했다.또한, 늘어나는 물량으로 인해 현장 종사자들의 노고를 격려하기 위해 터미널 작업인원에게 간식 및 음료 등 격려품도 전달했다.㈜한진 관계자는 “설 특수기에 대비하여 어느때보다 현장의 안전보건 관리가 중요하다. 이번 집중 점검을 비롯해 안전보건 사항을 더욱 면밀히 모니터링해 현장 종사자의 근무환경 개선을 지속하는 ESG 경영을 실천하고 고객 서비스에 차질이 없도록 만전을 기할 예정”이라고 말했다. (끝)</p>
+                            <p class="p ccc">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시⊙설 특수기 기간 물량 증가하는 허브 터미널에 조현민∙노삼석 사장 방문하여 집중 점검⊙현장 종사자에 안전보건관리 주의 당부 및 노고 격려 위한 격려</p>
                         </a>
                     </li>
                     <li>
@@ -130,7 +275,7 @@
                     </li>
                     <li>
                         <a href="" class="block">
-                            <h3 class="p ccc">[대한항공]조원태 한진그룹 회장, “2022년은 위기가 가져온 패러다임을 대 전환하는 중요한 시점”</h3>
+                            <h3 class="p ccc">[대한항공]조원태 한진그룹 회장, “2022년은 위기가 가져온 패러다임을 대 전환</h3>
                             <date class="p ccc">2022-01-03</date>
                         </a>
                     </li>
@@ -146,7 +291,7 @@
                 <li><a href="">이메일주소무단수집거부</a></li>
                 <li><a href="">사이트맵</a></li>
             </ul>
-            <address>서울특별시 중구 서소문로 117<span class="block"></span> Tel. 02-726-6166</address>
+            <address>서울특별시 중구 서소문로 117 <span class="block"></span> Tel. 02-726-6166 </address>
             <select name="" id="">
                 <option value="">계열사 바로가기</option>
                 <option value="" selected="selected">한진칼</option>
@@ -155,5 +300,6 @@
             <p class="p ccc">COPYRIGHT HANJIN KAL. All Rights Reserved.</p>
         </div>
     </footer>
+    
 </body>
 </html>

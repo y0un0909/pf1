@@ -20,7 +20,12 @@ width: calc(100% / 4 - 60px / 4);
 height: 260px;
 transition: all 0.5s;
 }
-
+main section#intro div ul li:nth-child(1){
+  
+}
+main section#intro div ul li:hover{
+  box-shadow: 0px 0px 10px #999;
+}
 main section#intro div ul li a {
   display: block;
   width: 100%;
@@ -30,10 +35,7 @@ main section#intro div ul li a {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: background 0.5s;
-  background: transparent;
 }
-
 main section#intro div ul li:nth-child(1) a{
  background: -webkit-gradient(radial, circle, color-stop(0.31, #94a8b755), color-stop(0.72, #94a8b7));
  background: -moz-radial-gradient(circle, #94a8b755 33%, #94a8b7 100%);
@@ -67,7 +69,8 @@ main section#intro div ul li:nth-child(4) a{
  background: -webkit-radial-gradient(circle, #94a8b755 33%, #94a8b7 100%);
  background: -o-radial-gradient(circle,  #94a8b755 33%, #94a8b7 100%);
  background: -ms-radial-gradient(circle,  #94a8b755 33%, #94a8b7 100%);
- background: radial-gradient(circle, #fcfcfd94 33%, #94a8b7 100%);	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a8b755', endColorstr='#94a8b7', gradientType=0);
+ background: radial-gradient(circle, #fcfcfd94 33%, #94a8b7 100%);	
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94a8b755', endColorstr='#94a8b7', gradientType=0);
 }
 
 main section#intro div ul li a::before{
@@ -88,7 +91,6 @@ main section#intro div ul li a::before{
 }
 
 main section#intro div ul li a:hover::before{
-  
   height: 50px;
   top: -30px;
 }
@@ -140,30 +142,30 @@ main section#intro div ul li a p {
 }
 main section#intro div ul li a:hover p{
   opacity: 1;
-  bottom: 86px;
+  bottom: 84px;
   color: white;
 }
 main section#intro div ul li a::after{
- content: "";
+  content: "";
   display: block;
   height: 100%;
- position: absolute;
- left: 0;
- top: 0;
- width: 100%;
- background: -webkit-gradient(radial, circle, color-stop(0.31, #296da1aa), color-stop(0.72, #296da1));
- background: -moz-radial-gradient(circle, #296da1aa 33%, #296da1 100%);
- background: -webkit-radial-gradient(circle, #296da1aa 33%, #296da1 100%);
- background: -o-radial-gradient(circle,  #296da1aa 33%, #296da1 100%);
- background: -ms-radial-gradient(circle,  #296da1aa 33%, #296da1 100%);
- background: radial-gradient(circle, #296da1aa 33%, #296da1 100%);	
- filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#296da1aa', endColorstr='#296da1', gradientType=0);
- opacity: 0;
- transition: all 0.5s;
- z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: -webkit-gradient(radial, circle, color-stop(0.31, #296da1aa), color-stop(0.72, #296da1));
+  background: -moz-radial-gradient(circle, #296da1aa 33%, #296da1 100%);
+  background: -webkit-radial-gradient(circle, #296da1aa 33%, #296da1 100%);
+  background: -o-radial-gradient(circle,  #296da1aa 33%, #296da1 100%);
+  background: -ms-radial-gradient(circle,  #296da1aa 33%, #296da1 100%);
+  background: radial-gradient(circle, #296da1aa 33%, #296da1 100%);	
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#296da1aa', endColorstr='#296da1', gradientType=0);
+  opacity: 0;
+  transition:all 0.5s;
+  z-index: 1;
 }
 main section#intro div ul li a:hover::after{
- opacity: 1;
+  opacity: 1;
 }
 /* 사회공헌 */
 #society {
@@ -176,34 +178,29 @@ main section#intro div ul li a:hover::after{
   padding: 20px;
   box-sizing: border-box;
   position: relative;
-  background-image: url(../img/roll.png);
+  background-image: url(../img/society-bg.png);
   background-repeat: no-repeat;
   background-position-x: 34%;
-  transition: all 0.5s;
 }
 #society .wrap h2 {
   
 }
-#society .wrap>p.p{
+#society .wrap>p.p {
   position: absolute;
   left: 20px;
   top: 61px;
   line-height: 1.4;
-  color: black;
 }
-
 #society .wrap article {
   
 }
 #society .wrap article a {
- border: 1px solid transparent;
- transition: all 0.5s;
- /*! background-color: #ccc; */
+  border: 3px solid transparent;
+  transition:all 0.5s;
 }
 #society .wrap article a:hover{
-  border: 1px solid #999;
-  /*! box-sizing: border-box; */
-  /*! background-color: #ccc; */
+  border: 3px solid #999;
+  background-color: #ccc;
 }
 #society .wrap article a figure{
   height: 130px;
@@ -250,7 +247,7 @@ main section#intro div ul li a:hover::after{
 }
 #news .wrap ul li:first-child {
  
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 #news .wrap ul li:first-child a {
  
@@ -271,14 +268,8 @@ main section#intro div ul li a:hover::after{
  
   margin-bottom: 15px;
 }
-#news .wrap ul li a p{
-  
-}
 #news .wrap ul li:first-child a p {
-   overflow: hidden;
-  text-overflow: ellipsis;
-  height: 66px;
-  
+ 
 }
 #news .wrap ul li {
   width: calc(50% - 30px);
@@ -296,4 +287,3 @@ main section#intro div ul li a:hover::after{
 #news .wrap ul li a date {
  
 }
-

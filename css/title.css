@@ -29,9 +29,24 @@ div#title{
   }
   div#title h2{
     margin-bottom: 11px;
+    animation-name: textup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes textup{
+    0%{
+      transform:scale(1) translateY(0);
+      opacity: 0;
+    }
+    50%{
+      transform: scale(1.2) translateY(calc(-50px / 2));
+    }
+    100%{
+      transform:scale(1) translateY(-50px);
+      opacity: 1;
+    }
   }
   div#title h2 span{
-    font-weight: 500;
   }
   div#title span{
     
@@ -51,6 +66,11 @@ div#title{
     margin-bottom: 30px;
     position: relative;
     top: -16px;
+    animation-name: textup;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
   }
   div#title a{
     background-color: green;
@@ -63,6 +83,13 @@ div#title{
     align-items: center;
     transition: all 1s;
     z-index: 1;
+    animation-name: textup;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /*! animation-iteration-count: infinite; */
+    /*! animation-direction: alternate; */
   }
   div#title a:hover{
     background-color: orange;
@@ -120,4 +147,3 @@ div#title{
     bottom: 0;
     opacity: 0.3;
   }
-  
