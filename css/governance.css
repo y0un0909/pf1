@@ -66,12 +66,12 @@
   width: calc(100% / 6);
 }
 #governance section div ul li:not(:first-child){
-  border-left: 1px solid #bbb;
+/*   border-left: 1px solid #bbb; */
 }
 #governance section div ul li a{
-  display: block;
+/*   display: block;
   text-align: center;
-  line-height: 3;
+  line-height: 3; */
 }
 #governance section div ul li:first-child a{
 }
