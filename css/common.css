@@ -19,9 +19,6 @@ body{
   max-width: 1100px;
   margin: 0 auto;
 }
-.hide{
-  display: none !important;
-}
 .block{
   display: block;
 }
@@ -55,6 +52,9 @@ body{
 }
 .bordertop{
   border-top: 3px solid #33b6ea !important;
+}
+.hide{
+  display: none;
 }
 .flex{
   display: flex;

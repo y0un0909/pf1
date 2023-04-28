@@ -32,11 +32,9 @@
         console.log("처음 로딩시 n값은"+n)
         $(".art .control button").click(function(){
             if($(this).hasClass("next")==1){
-                if(n<8){
-                    n=n+1;//n의 값에 1을 더해서 n에 넣어라 //n++ n값을 1씩 증가시켜라
-                    if(n<5){
-                        $(".art .timeline").css("transform","translateX("+(-200*n)+"px)");
-                    }
+                if(n<4){
+                    n=n+4;
+                    $(".art .timeline").css("transform","translateX("+(-200*n)+"px)");
                     $(".art .timeline li:nth-child("+(n+1)+") a").addClass("currentT");
                     $(".art .timeline li a").not(".art .timeline li:nth-child("+(n+1)+") a").removeClass("currentT");
                     console.log("next클릭"+n);
@@ -45,6 +43,7 @@
                 }else{
                     n=0;
                     $(".art .timeline").css("transform","translateX("+(-200*n)+"px)");
+                    
                     $(".art .timeline li:nth-child("+(n+1)+") a").addClass("currentT");
                     $(".art .timeline li a").not(".art .timeline li:nth-child("+(n+1)+") a").removeClass("currentT");
                     $(".timeline"+(n+1)).show();
@@ -53,10 +52,10 @@
                 }
             }else{
                 if(n>0){ // > 크다 비교연산자
-                    n=n-1; 
-                    if(n<5){
+                    n=n-4; 
+                    // if(n>4 && n<9){
                         $(".art .timeline").css("transform","translateX("+(-200*n)+"px)");
-                    }
+                    // }
                     $(".art .timeline li:nth-child("+(n+1)+") a").addClass("currentT");
                     $(".art .timeline li a").not(".art .timeline li:nth-child("+(n+1)+") a").removeClass("currentT");
                     // n=n-1;//n의 값에 1을 더해서 n에 넣어라 //n++ n값을 1씩 증가시켜라
@@ -66,7 +65,7 @@
                 }else{
                     n=4;
                     $(".art .timeline").css("transform","translateX("+(-200*n)+"px)");
-                    n=8;
+                    // n=8;
                     $(".art .timeline li:nth-child("+(n+1)+") a").addClass("currentT");
                     $(".art .timeline li a").not(".art .timeline li:nth-child("+(n+1)+") a").removeClass("currentT");
                     console.log("prev"+n);
@@ -77,7 +76,7 @@
         });
     //첫번째항목 블루지정
         $(".art .timeline li:nth-child(1) a").addClass("currentT");
-    //클린한 리스트에 클래스 블루 지정
+    //클린한 리스트에 클래스 블루 지정 & 해당 타임라인갤러리 보이게
         $(".art .timeline li a").click(function(){
                 $(this).addClass("currentT");
                 $(".art .timeline li a").not(this).removeClass("currentT");
@@ -85,38 +84,54 @@
                 console.log("직접클릭시 n값은  "+n);
                 
                 //클릭 리스트에 해당하는 컨테츠를 보이게 처리
-                $(".timeline"+(n+1)).show();
+                $(".timeline"+(n+1)).show().removeClass("hide")
                 $(".timelinegallery").not(".timeline"+(n+1)).hide();
                 return false;
             });
-
+    //첫번째 타임라인 갤러리만 보이게 하기(나머지는 감추기)
+            // $('.timelinegallery:nth-of-type(1)').hide();
+            $(".timelinegallery").not(".timeline1").hide();
+            
     //타임라인 갤러리 플러스버튼
-    $(".timelinegallery .intro").append('<button class="view">더보기</button>');
+        $(".timelinegallery .intro").append('<button class="view">더보기</button>');
     // 타임라인 더보기 버튼 클릭시 실행
-    $(".timelinegallery .intro .view").click(function(){
-                $(".tPopup").remove();
-                $(".timelinegallery").append('<div class="tPopup"></div>')
-                $(".tPopup").hide().fadeIn(500);
-                $(".intro").clone().appendTo(".tPopup");
-                $(".tPopup .view").attr("class","close");
-                $(".tPopup .close").text("닫기");
-                $(".tPopup .intro").append('<button class="pro">전문 읽기</button>');
-                $(".tPopup .intro button").wrapAll('<span class="wbutton"></span>');
-                // 닫기버튼 클릭하여 창 닫기
-                $(".tPopup .close").click(function(){
-                    $(".tPopup").fadeOut(500);
-                });
-            //  전문보기버튼클릭하여 창열기
-            $(".tPopup .pro").click(function(){
-                $(".propopup").remove();
-                $("#wart").append('<div class="propopup"><h3 class="h3">파도마저 삼킨 오디세이</h3><iframe src="" frameborder="0"></iframe><button type="button" class="close">닫기</button></div>');
-                $(".propopup").hide().fadeIn(500);
-                $(".propopup iframe").attr("src","art-1.html");
-                $(".propopup iframe").css({"width":"100%","height":"400px"});
-                $('#wart .propopup .close').wrap('<span class="wbutton"></span>');
-                $('#wart .propopup .close').click(function(){
-                    $(".propopup").fadeOut(500);
-                });
+        $(".timelinegallery .intro .view").click(function(){
+                    $(".tPopup").remove();
+                    // $(".timelinegallery").append('<div class="tPopup"></div>')
+                    $(this).parents(".timelinegallery").append('<div class="tPopup"></div>')
+                    $(".tPopup").hide().fadeIn(500);
+                    $(this).parents(".intro").clone().appendTo(".tPopup");
+                    $(".tPopup .view").attr("class","close");
+                    $(".tPopup .close").text("닫기");
+                    $(".tPopup .intro").append('<button class="pro">전문 읽기</button>');
+                    $(".tPopup .intro button").wrapAll('<span class="wbutton"></span>');
+                    // 닫기버튼 클릭하여 창 닫기
+                    $(".tPopup .close").click(function(){
+                        $(".tPopup").fadeOut(500);
+                    });
+                //  전문보기버튼클릭하여 창열기
+                $(".tPopup .pro").click(function(){
+                    $(".propopup").remove();
+                    $("#wart").append('<div class="propopup"><h3 class="h3">파도마저 삼킨 오디세이</h3><iframe src="" frameborder="0"></iframe><button type="button" class="close">닫기</button></div>');
+                    $(".propopup").hide().fadeIn(500);
+                    $(".propopup iframe").attr("src","art-1.html");
+                    $(".propopup iframe").css({"width":"100%","height":"400px"});
+                    $('#wart .propopup .close').wrap('<span class="wbutton"></span>');
+                    $('#wart .propopup .close').click(function(){
+                        $(".propopup").fadeOut(500);
+                    });
+                    });
+            });
+            $(".wrap .timelinegallery figure img").click(function(){
+                $(".popupimg").remove()
+                $(".wrap .timelinegallery").prepend('<div class="popupimg"></div>');
+                //popupimg안에 이미지를 추가하시오
+                $(this).parent().clone().appendTo(".popupimg").hide().fadeIn();
+                //닫기버튼
+                $("figure figcaption").show();
+                $(".popupimg").append("<button class='close'>close</button>")
+                $(".close").click(function(){
+                    $(".popupimg").fadeOut();
                 });
             });
     });
@@ -306,9 +321,9 @@
         <section class="art padding100">
             <div class="wrap">
                 <ul class="nav flex h4 bold">
-                    <li><a href="">정석 조중훈</a></li>
-                    <li><a href="" class="blue">사업은 예술이다</a></li>
-                    <li><a href="">전기 다운로드</a></li>
+                    <li><a href="president.html">정석 조중훈</a></li>
+                    <li><a href="art.html" class="blue">사업은 예술이다</a></li>
+                    <li><a href="down.html">전기 다운로드</a></li>
                 </ul>
                 <h2 class="hide">사업은 예술이다</h2>
                 <ul class="flex timeline">
@@ -343,71 +358,6 @@
                         신용을 연료로 불붙은 청년의 열정은 이후 한진의 사운을 완전히 바꿀 베트남의 바다에서 용솟음치게 된다.<span class="block"></span>
                         파도마저 삼킬 듯이.</p>
                 </div>
-                <figure>
-                    <img src="img/1.gif" alt="">
-                        <figcaption>1930년대 진해 해원양성소. 오늘날 한국해양대의 전신이다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/2.gif" alt="">
-                        <figcaption>1930년대 상하이는 세계 문물과 인종의 전시장이었다 <span class="block"></span>
-                            이곳에서 조중훈은 유대인 상인의 사업철학을 배웠다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/3.gif" alt="">
-                        <figcaption>1945년 인천 항동 한진상사 창고</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/4.gif" alt="">
-                        <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/5.gif" alt="">
-                        <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/6.gif" alt="">
-                        <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/7.gif" alt="">
-                        <figcaption>미군 수송 용역은 한진상사를 한 단계 업그레이드하는 계기였다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/8.gif" alt="">
-                        <figcaption>미군 장성들은 조중훈의 신용과 열정에 감탄했다.</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/9.gif" alt="">
-                        <figcaption>1959년 한진상사 문산영업소</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/10.gif" alt="">
-                        <figcaption>1966년 주한미8군사령부</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/11.gif" alt="">
-                        <figcaption>1969년 서울-대전 한진고속 개통식</figcaption>
-                </figure>
-                </div>
-                <div class="timeline2 timelinegallery flex padding30">
-                    <div class="intro">
-                        <h3 class="h5 bold">전쟁과 그림은<span class="block"></span>
-                            멀리서 봐야 한다.<span class="block"></span>
-                            사업은 더 멀리서 봐야 한다.</h3>
-                        <p class="ccc">베트남은 기회의 땅이었다. 기회는 누구에게나 있다.<span class="block"></span>
-                            그러나 누구나 기회를 잡는 것은 아니다. 조중훈은 그것이 기회임을 포착하고 모든 걸 걸었기에 기적을 만들어낼 수 있었다. 타이밍이란 그런 것이다.<span class="block"></span>
-                            전쟁과 그림은 멀리서 봐야 한다. 멀리서 봐야 한 폭의 그림이 한눈에 들어온다.<span class="block"></span>
-                            전쟁도 전투만 보아서는 안되고, 전장을 둘러싼 모든 것을 봐야 한다.<span class="block"></span>
-                            조중훈은 퀴논항을 바다나 육지에서 바라보지 않고 하늘에서 새의 눈으로 내려다보았다.<span class="block"></span>
-                            어떤 사업 기회가 있는지, 자신이 무엇을 해야 하는지 한눈에 간파했다.<span class="block"></span>
-                            베트남에서 사업의 기회를 얻은 것은 우연이 아니었다.<span class="block"></span>
-                            국내에서 주한미군의 수송을 책임지면서 차곡차곡 쌓아두었던 신용은 어떤 담보나 배경보다 든든했다.<span class="block"></span>
-                            부암장 환송파티의 추억은 텐타곤에 깊은 인상을 남겼고, 퀴논항의 미군 수뇌부를<span class="block"></span>
-                            움직이게 했다.<span class="block"></span> 신용의 승리였고, 열정의 보답이었다.
-                            조중훈은 베트남에서 미군의 마음만 산 게 아니었다. 목숨을 걸고 돈을 벌기 위해 합류한 근로자, 파월장병, 그리고 상처받은 베트남 현지인들의 마음까지 샀다.<span class="block"></span>
-                            그것은 사선을 넘나들며 수송하는 원동력이 되었다.<span class="block"></span>
-                            퀴논의 전설은 이후 하늘길과 바닷길을 여는 열쇠가 되었다.</p>
-                    </div>
                     <figure>
                         <img src="img/1.gif" alt="">
                             <figcaption>1930년대 진해 해원양성소. 오늘날 한국해양대의 전신이다.</figcaption>
@@ -423,15 +373,15 @@
                     </figure>
                     <figure>
                         <img src="img/4.gif" alt="">
-                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
+                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움<span class="block"></span> 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
                         <img src="img/5.gif" alt="">
-                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
+                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움<span class="block"></span> 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
                         <img src="img/6.gif" alt="">
-                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
+                            <figcaption>한진상사의 초기 사업이 순항한 것은 어려움<span class="block"></span> 속에서도 신용을 잃지 않았기 떄문이다.</figcaption>
                     </figure>
                     <figure>
                         <img src="img/7.gif" alt="">
@@ -453,6 +403,66 @@
                         <img src="img/11.gif" alt="">
                             <figcaption>1969년 서울-대전 한진고속 개통식</figcaption>
                     </figure>
+                </div>
+                <div class="timeline2 timelinegallery flex padding30">
+                    <div class="intro">
+                        <h3 class="h5 bold">전쟁과 그림은<span class="block"></span>
+                            멀리서 봐야 한다.<span class="block"></span>
+                            사업은 더 멀리서 봐야 한다.</h3>
+                        <p class="ccc">베트남은 기회의 땅이었다.<span class="block"></span> 기회는 누구에게나 있다.<span class="block"></span>
+                            그러나 누구나 기회를 잡는 것은 아니다. 조중훈은 그것이 기회임을 포착하고 모든 걸 걸었기에 기적을 만들어낼 수 있었다. 타이밍이란 그런 것이다.<span class="block"></span>
+                            전쟁과 그림은 멀리서 봐야 한다. 멀리서 봐야 한 폭의 그림이 한눈에 들어온다.<span class="block"></span>
+                            전쟁도 전투만 보아서는 안되고, 전장을 둘러싼 모든 것을 봐야 한다.<span class="block"></span>
+                            조중훈은 퀴논항을 바다나 육지에서 바라보지 않고 하늘에서 새의 눈으로 내려다보았다.<span class="block"></span>
+                            어떤 사업 기회가 있는지, 자신이 무엇을 해야 하는지 한눈에 간파했다.<span class="block"></span>
+                            베트남에서 사업의 기회를 얻은 것은 우연이 아니었다.<span class="block"></span>
+                            국내에서 주한미군의 수송을 책임지면서 차곡차곡 쌓아두었던 신용은 어떤 담보나 배경보다 든든했다.<span class="block"></span>
+                            부암장 환송파티의 추억은 텐타곤에 깊은 인상을 남겼고, 퀴논항의 미군 수뇌부를<span class="block"></span>
+                            움직이게 했다.<span class="block"></span> 신용의 승리였고, 열정의 보답이었다.
+                            조중훈은 베트남에서 미군의 마음만 산 게 아니었다. 목숨을 걸고 돈을 벌기 위해 합류한 근로자, 파월장병, 그리고 상처받은 베트남 현지인들의 마음까지 샀다.<span class="block"></span>
+                            그것은 사선을 넘나들며 수송하는 원동력이 되었다.<span class="block"></span>
+                            퀴논의 전설은 이후 하늘길과 바닷길을 여는 열쇠가 되었다.</p>
+                    </div>
+                        <figure>
+                            <img src="img/img1.gif" alt="">
+                                <figcaption>한진상사가 하역을 책임진 후로 퀴논항에서 체화가 없어졌다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img2.gif" alt="">
+                                <figcaption>1968년 퀴논항 시절</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img3.gif" alt="">
+                                <figcaption>1968년 퀴논항 하역 현장</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img4.gif" alt="">
+                                <figcaption>1969년 월맹군의 기습공격으로 파괴된 수송트럭을 바라보며.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img5.gif" alt="">
+                                <figcaption>미국 국방부에 걸려 있는, 베트남전 당시 물자 수송 중 전투를 묘사한 그림.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img6.gif" alt="">
+                                <figcaption>조중훈은 베트남 현지 직원의 복지에 만전을 기했다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img7.gif" alt="">
+                                <figcaption>1969년 한진 베트남지사를 방문해 직원들을 격려하고 있다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img8.gif" alt="">
+                                <figcaption>1969년 파월 맹호부대를 방문해 장병들을 격려했다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img9.gif" alt="">
+                                <figcaption>1970년 구엔 반 티우 베트남 대통령과 함께.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/img10.gif" alt="">
+                                <figcaption>베트남 군수물자 수송 계약서에 서명하고 있다.</figcaption>
+                        </figure>
                 </div>
             </div>
         </section>
