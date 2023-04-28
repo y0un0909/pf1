@@ -1,0 +1,186 @@
+body{
+  font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+header{
+  border-bottom: 1px solid #f2f2f2;
+}
+#logo{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 63px;
+  max-width: 1200px;
+}
+#logo #headmenu{
+  
+  width: 100%;
+  /*! max-width: 1200px; */
+}
+#logo #headmenu figure{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo #headmenu figure img{
+  
+  width: 80%;
+  margin-top: -15px;
+}
+#logo #headmenu figure figcaption {
+  
+}
+#logo #headmenu h1.bold.h2{
+  font-size: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+  padding-bottom: 10px;
+  margin-right: 70px;
+}
+#logo #headmenu h1.bold.h2 a{
+  display: block;
+  font-weight: bold;
+}
+#logo #headmenu h1.bold.h2 a span{
+  
+}
+#logo #headmenu ul.gnb{
+  display: flex;
+  width: 211px;
+  /*! justify-content: space-between; */
+  gap: 30px;
+  align-items: center;
+}
+#logo #headmenu ul.gnb li {
+  
+}
+#logo #headmenu ul.gnb li a {
+  
+}
+#logo #headmenu ul.h4.flex{
+  
+  gap: 32px;
+  width: 32%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+}
+#logo #headmenu ul.h4.flex li{
+  
+}
+#logo #headmenu ul.h4.flex li a{
+  
+}
+#logo #headmenu .etcmenu{
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  align-items: center;
+  transform: translateX(68px);
+}
+#logo #headmenu .etcmenu li{
+
+}
+
+#logo #headmenu .etcmenu li a{
+  font-size: 14px;
+}
+#logo #headmenu .etcmenu li a span{
+  
+  color: #0084ff;
+}
+main{
+
+}
+main section{
+
+  margin-top: 50px;
+  font-size: 30px;
+}
+main section div.wrap.padding30{
+
+}
+main section div.wrap.padding30 h2.h1.bold {
+  padding-bottom: 40px;
+}
+main section #right{
+  justify-content: space-between;
+}
+main section div.wrap.padding30 #right #i{
+  
+}
+main section div.wrap.padding30 #right #i p{
+  
+}
+main section div.wrap.padding30 #right #i p a{
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 50px;
+}
+main section div.wrap.padding30 #right #i p:nth-child(1) a{
+  border-bottom:: 1px solid #0084ff;
+}
+main section div.wrap.padding30 #right{
+  line-height: 1.3;
+}
+#bigbox{
+  
+}
+main section #box {
+  
+}
+main section #box #hehe {
+  
+  padding: 50px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+main section #box select{
+  
+  border: 1px solid #ccc;
+  background-color: #fbfbfd;
+  height: 50px;
+  width: 210px;
+  text-align: center;
+  color: #0084ff;
+  font-weight: bold;
+  font-size: 16px;
+}
+main section #box #test {
+  
+}
+main section #box #test option {
+  
+}
+main section .box2 {
+  
+  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+main section .box2 #di {
+  
+}
+main section .box2 #di option {
+  
+}
+main section #box .text{
+  display: flex;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  height: 50px;
+  border-radius: .25rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+}
