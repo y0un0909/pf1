@@ -1,7 +1,6 @@
 /* 타이틀영역 */
 div#title{
     height: 600px;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
