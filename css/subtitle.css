@@ -48,7 +48,48 @@
   display: inline-block; /* 인라인속성인수평과 블럭속성인너비지정이 가능한다 */ 
   transform:translateY(3px) rotate(45deg);
 }
-
+#subtitle .wrap button a{
+  color: white;
+}
+#subtitle .wrap .b{
+  position: absolute;
+  left: 0px;
+  border: none;
+  background-color: transparent;
+  width: 134px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  opacity: 0.8;
+  width: 180px;
+}
+#subtitle .wrap .b::before{
+  content: "";
+  border:3px solid #fff;
+  width:30px;
+  height:30px;
+  display:block;
+  position: absolute;
+  left: -65px;
+  top: calc((100% - 36px) / 2);
+  border-radius: 50%;
+}
+#subtitle .wrap .b::after{
+  content: "";
+  border: 3px solid #fff; 
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 10px;
+  height: 10px;
+  display: inline-block; /* 인라인속성인수평과 블럭속성인너비지정이 가능한다 */ 
+  transform:translateY(4px) rotate(225deg);
+  position: absolute;
+  left: -51px;
+}
+#subtitle .wrap .b a{
+  
+  color: white;
+}
 
 
 

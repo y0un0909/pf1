@@ -101,7 +101,8 @@
                     $(this).parents(".timelinegallery").append('<div class="tPopup"></div>')
                     $(".tPopup").hide().fadeIn(500);
                     $(this).parents(".intro").clone().appendTo(".tPopup");
-                    $(".tPopup .view").attr("class","close");
+                    $('.timeline3 .tPopup .intro h3').html('세계 항공 역사에는 두 가지 미스터리가 있다.<br>하나는 육중한 쇳덩어리가 하늘을 날아오른 것이고<br> 다른 하나는 1970년대 한국의 항공사가<br> 태평양을 건넌 것이다.');
+                    $(".tPopup .view").attr("class","close").text();
                     $(".tPopup .close").text("닫기");
                     $(".tPopup .intro").append('<button class="pro">전문 읽기</button>');
                     $(".tPopup .intro button").wrapAll('<span class="wbutton"></span>');
@@ -128,12 +129,23 @@
                 //popupimg안에 이미지를 추가하시오
                 $(this).parent().clone().appendTo(".popupimg").hide().fadeIn();
                 //닫기버튼
-                $("figure figcaption").show();
+                $(".popupimg figure figcaption").show();
                 $(".popupimg").append("<button class='close'>close</button>")
-                $(".close").click(function(){
+                $(".popupimg,.close").click(function(){
                     $(".popupimg").fadeOut();
                 });
             });
+        // 이미지클릭시 팝업이미지 처리
+        // let=i;
+        // $(".timelinegallery figure img").click(function(){
+        //         $('.wfigure').remove();
+        //         $(this).parent().parent(".timelinegallery").append('<div class="wfigure"></div>');
+        //         $(this).parent().clone().appendTo('.wfigure');
+        //         i=$(this).parent().index();
+        //         $('.wfigure').find("img").attr('src','img/b'+i+'.jpg');
+        //         $('.wfigure').append('<button class="close">닫기</button>');
+
+        //     });
     });
     </script>
 </head>
@@ -304,8 +316,9 @@
     <!-- 서브타이틀 -->
     <div id="subtitle">
         <div class="wrap flex">
-            <h2 class="h1 bold">정석 조중훈</h2>
-            <button class="h3">사업은 예술이다</button>
+            <h2 class="h1 bold">사업은 예술이다</h2>
+            <button class="h3 b"><a href="president.html">정석 조중훈</a></button>
+            <button class="h3"><a href="down.html">전기 다운로드</a></button>
         </div>
     </div>
     <!-- 메인영역 -->
@@ -462,6 +475,62 @@
                         <figure>
                             <img src="img/img10.gif" alt="">
                                 <figcaption>베트남 군수물자 수송 계약서에 서명하고 있다.</figcaption>
+                        </figure>
+                </div>
+                <div class="timeline3 timelinegallery flex padding30">
+                    <div class="intro">
+                        <h3 class="h5 bold">세계 항공 역사에는<span class="block"></span> 두 가지 미스터리가 있다.<span class="block"></span></h3>
+                        <p class="ccc">적자투성이 국영 항공사를
+                            구할 사람은 조중훈밖에 없었다.<span class="block"></span>
+                            무모하기 짝이 없는 도전을 포기했다면 지금의 대한항공은 없었을 것이다.<span class="block"></span>
+                            그리고 그가 그토록 꿈꾸던 해운왕의 꿈도 실현되지 못했을 것이다.<span class="block"></span>
+                            어쩔 수 없이 시작한 항공이었지만, 조중훈은 기왕 할 거라면 예술처럼 하고 싶었다.<span class="block"></span>
+                            그 시절 한국에서 항공사를 운영하고 성장시킨다는 것은 라이트 형제가 하늘을 날아보겠다고했을 때만큼이나 불가능해 보였다.<span class="block"></span>
+                            하지만 결국 육중한 쇳덩어리가 새처럼 하늘을 날아오른 것처럼 그는 척박한 땅에서 고사 직전의 항공사를 이륙시켰다.<span class="block"></span>
+                            높이 날 수 없다면 이륙하지도 않겠다는 듯 처음부터 강력한 추진력으로 고도를 높였다.<span class="block"></span>
+                            나아가 점보기를 도입하고 태평양을 건너는 대모험을 감행했다. 조중훈은 매의 눈으로 하늘길을 내다보았다. 프랑크푸르트가 아닌 파리의 유럽노선의 거점으로 삼고 뉴욕이 아닌 LA로 미주노선을 개척한 것이나 일본 지장도시의 승객을 공략한 것 모두 역발상의 선경지명이 아닐 수 없다.<span class="block"></span>
+                            비행기가 날 수 있었던 것은 날 수 있다고 믿은 사람들이 있었기 때문이다.
+                            항공의 불모지 한국에서 오늘날 세계적인 항공사가 탄생할 수 있었던 것도 성공을 확신한 조중훈이 있었기에 가능했다.</p>
+                    </div>
+                        <figure>
+                            <img src="img/chair_thum3_img1.gif" alt="">
+                                <figcaption>베트남에 진출해 있는 인력을 수송하기 위해 90인승<br>중형항공기 슈퍼컨스텔레이션 4발기를 운항했다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img2.gif" alt="">
+                                <figcaption>1969년 3월 대한항공공사 인수 당시 선서하는 조중훈.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img3.gif" alt="">
+                                <figcaption>1969년 대한항공공사 인수 당시. 불안에 휩싸인 직원들에게 <br>조중훈은 공개석상에서 세 차례에 걸쳐 감원은 절대 없음을 강조했다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img4.gif" alt="">
+                                <figcaption>1973년 이륙하는 B747-200</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img5.gif" alt="">
+                                <figcaption>1969년 일본항공 사장과. 일본과의 항공협정을 유리하게 이끌어낸 조중훈의 다음 목표는 일본 승객을 태우고 서울을 거쳐 유럽으로 가는 것이었다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img6.gif" alt="">
+                                <figcaption>1972년 4월 19일 대한항공 KE002 B707 여객기가 LA에 도착한 순간 <br>이를 지켜본 수천 명의 교포가 일제히 "대한민국 만세!"를 외쳤다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img7.gif" alt="">
+                                <figcaption>1972년 대한항공 KE002 여객기 태평양 횡단 취항식.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img8.gif" alt="">
+                                <figcaption>1970년 B747 점보기 도입 가계약 서명. 당시 보잉기의 도입은 사업 도약을 위한 과감한 시도였다.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img9.gif" alt="">
+                                <figcaption>1973년 5월 B747 태평양노선 취항</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="img/chair_thum3_img10.gif" alt="">
+                                <figcaption>1971년 전자계산실 발족. 조중훈은 항공공사 인수 직후부터 업무전산화에 관심을 가졌다.</figcaption>
                         </figure>
                 </div>
             </div>

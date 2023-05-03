@@ -2,6 +2,7 @@
   
   width: 180px;
 }
+
 main section .wrap ul.nav li:nth-child(2)::before{
   color: #00a0c6;
 }
@@ -121,7 +122,23 @@ main section .wrap ul.nav li:nth-child(2) a{
 .timelinegallery>*{
   width: calc(100% / 4 - 60px / 4);
 }
-
+/* .timelinegallery .wfigure{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.timelinegallery .wfigure img{
+  
+}
+.timelinegallery .wfigure figcaption{
+  
+} */
 .timelinegallery .intro {
   
   line-height: 1.5;
@@ -135,17 +152,26 @@ main section .wrap ul.nav li:nth-child(2) a{
   border: 1px solid #ccc;
   display: block;
   width: 20%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   transform: translateY(15px);
-  margin-top: 25px;
+  margin-top: 10px;
+}
+.timeline3 .intro h3::after{
+  content: "";
+  border: 1px solid #ccc;
+  display: block;
+  width: 20%;
+  margin-bottom: 30px;
+  transform: translateY(15px);
+  margin-top: 10px;
 }
 .timelinegallery .intro h3 span {
   
 }
 .timelinegallery .intro p{ 
-  height: 75px;
+  height: 83px;
   overflow: hidden;
-  /*! font-size: 14px; */
+  font-size: 14px;
 }
 .timelinegallery .intro p span {
   
@@ -165,6 +191,9 @@ main section .wrap ul.nav li:nth-child(2) a{
   background-color: white;
   padding: 40px;
   box-sizing: border-box;
+}
+.timeline3 .tPopup h3{
+  
 }
 .timelinegallery .tPopup h3{
   
@@ -265,14 +294,10 @@ main section .wrap ul.nav li:nth-child(2) a{
   z-index: 6;
 }
 .popupimg img{
-  position: absolute;
-  top:calc(50% - 259px);
-  font-size: 20px;
-  width: 40%;
-  left: 30%;
+ width: 390px;
+  height: 400px;
 }
 .popupimg figure figcaption{
-  
   position: absolute;
   top: calc(50% - -162px);
   left: 30%;
@@ -287,7 +312,13 @@ main section .wrap ul.nav li:nth-child(2) a{
 
 .popupimg .close{
   position: absolute;
-  top:calc(50% - 259px);
-  left: calc(50% + 233px);
-  font-size: 20px
+  right: calc(50% - (390px / 2));
+  top: calc(50% - (400px / 2) - 40px);
+  font-size: 0;
+  background-image: url(../img/close.jpg);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
 }

@@ -38,6 +38,9 @@
   #society .wrap{
   background-image: none;
   }
+  #society .wrap article a:hover{
+  border: none;
+  }
   /* 그룹사소식   */
   #news .wrap ul{
   display: block;
@@ -84,10 +87,12 @@
   }
   header h1{
     margin: 0 auto;
-    transform: scale(0.65);
+    transform: scale(1.4);
+    padding-left: 19%;
   }
   header h1 a{
   background-image: url(../img/hj_logo.png);
+  background-repeat: no-repeat;
   }
   header nav>*:not(:last-child){
     display: none;
@@ -165,6 +170,11 @@
   }
   #society .wrap > p.p{
     position: static;
+    /*! margin-bottom: 30px; */
+  }
+  #society .wrap article a:hover{
+    
+  /*! border: none; */
   }
   /*  한진뉴스  */
   #news .wrap ul{
@@ -247,7 +257,9 @@
   }
   
 }
-
+#society .wrap article a figure:hover{
+  
+}
 
 
 

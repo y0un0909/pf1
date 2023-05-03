@@ -195,7 +195,7 @@ main section#intro div ul li a:hover::after{
   
 }
 #society .wrap article a {
-  border: 3px solid transparent;
+  /*! border: 3px solid transparent; */
   transition:all 0.5s;
 }
 #society .wrap article a:hover{
@@ -235,6 +235,7 @@ main section#intro div ul li a:hover::after{
 }
 #news .wrap h2 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 #news .wrap ul {
   display: flex;
@@ -245,12 +246,24 @@ main section#intro div ul li a:hover::after{
   line-height: 1.2;
   color: red;
 }
+#news .wrap ul li{
+  margin-bottom: 13px;
+  width: 322px;
+}
 #news .wrap ul li:first-child {
  
-  margin-bottom: 70px;
+  /*! width: auto; */
+  /*! margin-top: 12px; */
 }
+#news .wrap ul li a{
+}
+
 #news .wrap ul li:first-child a {
  
+  /*! display: flex; */
+  /*! margin-top: 5px; */
+  /*! justify-content: space-between; */
+  /*! width: 517px; */
 }
 #news .wrap ul li:first-child a figure {
   position: absolute;
@@ -259,14 +272,29 @@ main section#intro div ul li a:hover::after{
   width: calc(50% - 10px);
 }
 #news .wrap ul li:first-child a figure img {
-  width: 100%;
+ 
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #news .wrap ul li:first-child a figure figcaption {
  
 }
+#news .wrap ul li a h3{
+  margin-bottom: 8px;
+}
+#news .wrap ul li::before:first-child a h3{
+  content: "";
+}
 #news .wrap ul li:first-child a h3 {
  
-  margin-bottom: 15px;
+  /*! margin-bottom: 8px; */
+  /*! text-overflow: ellipsis; */
+  /*! white-space: nowrap; */
+  /*! overflow: hidden; */
+  /*! width: 59%; */
+  margin-top: 10px;
 }
 #news .wrap ul li:first-child a p {
  
@@ -275,12 +303,9 @@ main section#intro div ul li a:hover::after{
   width: calc(50% - 30px);
 }
 #news .wrap ul li:nth-child(n+2){
-  width: calc(50% - 70px);
-  margin-bottom: 10px;
+  /*! width: calc(50% - 30px); */
 }
-#news .wrap ul li a {
- 
-}
+
 #news .wrap ul li a h3 {
  
 }

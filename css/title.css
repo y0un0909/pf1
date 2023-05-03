@@ -27,7 +27,7 @@ div#title{
     top: 0;
   }
   div#title h2{
-    margin-bottom: 11px;
+    margin-bottom: 25px;
     animation-name: textup;
     animation-duration: 1s;
     animation-fill-mode: forwards;

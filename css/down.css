@@ -20,6 +20,7 @@ section .bigbox .photo ul.h5{
   flex-wrap: wrap;
   column-gap: calc(150px / 4);
   row-gap: 20px;
+  position: relative;
 }
 section .bigbox .photo ul.h5 li{
 
@@ -36,6 +37,7 @@ section .bigbox .photo ul.h5 li p{
   font-size: 14px;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 section .bigbox .photo ul.h5 li figure{
 
@@ -45,11 +47,48 @@ section .bigbox .photo ul.h5 li figure img{
 }
 section .bigbox .photo ul.h5 li button{
   
-  border: 1px solid #00a0c6;
-  background: none;
-  color: #00a0c6;
+  border: none;
+  /*! background: none; */
+  /*! color: #00a0c6; */
   width: 100px;
-  height: 30px;
-  font-size: 15px;
-  margin: 30px 0;
+  height: 31px;
+  font-size: 0;
+  margin-bottom: 30px;
+  background-image: url(../img/downlode.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+}
+.wfigure{
+  
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6);
+}
+.wfigure figure{
+  
+}
+.wfigure figure img{
+  width: 390px;
+  height: 400px;
+}
+.wfigure .close{
+  
+  position: absolute;
+  font-size: 0;
+  background-image: url(../img/close.jpg);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  right: calc(50% - (390px / 2));
+  top: calc(50% - (400px / 2) - 40px);
 }
