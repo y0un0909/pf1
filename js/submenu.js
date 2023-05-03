@@ -105,5 +105,4 @@ $(document).ready(function(){
         $(this).siblings().children(".submenu").removeClass("submenuup")
         // $(this).children("ul.submenu").detach("submenuup");
     })
-   
 });
