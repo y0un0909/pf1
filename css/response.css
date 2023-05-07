@@ -79,7 +79,7 @@
   }
 }
 /* 모바일버전 */
-@media screen and (max-width:768px){ /*max-width:760px는 너비가 760이하일때,최대너비가 760일때*/
+@media screen and (max-width:760px){ /*max-width:760px는 너비가 760이하일때,최대너비가 760일때*/
   /* 헤더영역   */
   header{
     width: 100%;
@@ -93,6 +93,7 @@
   header h1 a{
   background-image: url(../img/hj_logo.png);
   background-repeat: no-repeat;
+  width: 325px;
   }
   header nav>*:not(:last-child){
     display: none;

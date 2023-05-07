@@ -1,10 +1,6 @@
 /* 타이틀영역 */
 div#title{
     height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-image: url(../img/title.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,20 +8,25 @@ div#title{
     background-attachment: fixed;
     position: relative;
   }
-  div#title::before{
-    /*! content: ""; */
-    display: block;
-    width: 0;
-    height: 0;
-    border: 240px solid rgba(0,212,222,0.6);
-    border-right-width: 390px;
-    border-left-width: 390px;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+div#title .wlist{
+  height: 70%;
+}
+div#title .wlist .slick-next{
+ 
+  right: 25px;
+}
+div#title .wlist .slick-prev{
+  
+  left: 25px;
+  z-index: 3;
+}
+#title .wlist .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
   div#title h2{
     margin-bottom: 25px;
     animation-name: textup;
@@ -38,10 +39,10 @@ div#title{
       opacity: 0;
     }
     50%{
-      transform: scale(1.2) translateY(calc(-50px / 2));
+      transform: scale(1.2) translateY(calc(50px / 2));
     }
     100%{
-      transform:scale(1) translateY(-50px);
+      transform:scale(1) translateY(0px);
       opacity: 1;
     }
   }
@@ -71,6 +72,16 @@ div#title{
     animation-delay: 0.5s;
     opacity: 0;
   }
+  #title .btn_pause{ 
+  width: 33px;
+  height: 34px;
+  background-image: url(../img/stop.png);
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  }
   div#title a{
     background-color: green;
     color: white;
@@ -89,6 +100,8 @@ div#title{
     opacity: 0;
     /*! animation-iteration-count: infinite; */
     /*! animation-direction: alternate; */
+    margin: 0 auto;
+    top: 30px;
   }
   div#title a:hover{
     background-color: orange;
@@ -146,3 +159,12 @@ div#title{
     bottom: 0;
     opacity: 0.3;
   }
+.wlist .slick-dots li button::before{
+  font-size:20px;
+  transition:all 0.5s;
+  opacity: 0.2;
+}
+.wlist .slick-dots li.slick-active button::before{
+  color: gold;
+  transform: scale(1.5);
+}

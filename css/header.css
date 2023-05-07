@@ -191,7 +191,7 @@ ul.submenu .close{
     vertical-align: 2px; /* vertical-align 글자수직정렬 */
   }
 .ham{
-  /*! display: block; */
+  display: none;
   font-size: 0;
   border: none;
   background-color: transparent;
@@ -206,4 +206,5 @@ ul.submenu .close{
   display: block;
   height: 2px;
   background-color: #fff;
+  margin-top: 7px;
 }

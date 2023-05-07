@@ -199,7 +199,7 @@ main section#intro div ul li a:hover::after{
   transition:all 0.5s;
 }
 #society .wrap article a:hover{
-  border: 3px solid #999;
+  border: -1px solid #999;
   background-color: #ccc;
 }
 #society .wrap article a figure{
@@ -311,4 +311,35 @@ main section#intro div ul li a:hover::after{
 }
 #news .wrap ul li a date {
  
+}
+#title .slick-dots{
+  z-index: 2;
+  bottom: -13px;
+}
+#society .wrap .societyArticle{
+  
+  width: 50%;
+}
+.control{
+  position: absolute;
+  
+}
+#society .slick-prev, .slick-next{
+  /*! top: initial; */
+  /*! bottom: -38px; */
+}
+#society .slick-prev{
+}
+#society .slick-next{
+    
+}
+.control{
+  position: absolute;
+  bottom: -27px;
+  left: 70%;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: center;
+  z-index: 3;
 }

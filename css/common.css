@@ -144,3 +144,9 @@ main section .wrap ul.nav li a {
 main section .wrap ul.nav li:nth-child(1) a{
   border-top-color:  #ccc;
 }
+.play{
+  background-image:url(../img/start.png);
+}
+.stop{
+  background-image:url(../img/stop.png);
+}

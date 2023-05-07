@@ -31,6 +31,7 @@
 }
 #governance section div{
 
+  justify-content: space-between;
 }
 
 #governance section div strong:nth-child(1){
@@ -75,9 +76,28 @@
 }
 #governance section div ul li:first-child a{
 }
-#governance section div  h3{
+#governance section div h3{
   margin-top:80px;
   margin-bottom: 20px;
+}
+#governance section div .name{
+  
+}
+#governance section .allcheck{
+  
+  height: 35px;
+  margin-top: 80px;
+  background-color: white;
+  border: solid 1px #00a0c6;
+  font-size: 14px;
+  padding: 9px 27px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+#governance section div.box h3{
+  
+  margin: 0;
+  color: white;
 }
 #governance section div h3+div{ /* + 형제선택자 h3바로뒤에오는 div */  
   border: 1px solid #ccc;
@@ -86,11 +106,26 @@
   width: 1100px;
   box-sizing: border-box;
 }
-#governance section div h3 + div.box{
-  
+.box{
+
+}
+#governance section ol li h3{
+  padding: 20px;
+  background-color: #00a0c6;
+  display: block;
+  height: 66px;
+  margin-top: 30px;
+  color: white;
+}
+#governance section ol li .back{
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #e6e6e6;
 }
 #governance section .box1{
   
+  border: 1px solid #ccc;
+  padding: 30px;
 }
 #governance section div ul li p{
     
@@ -102,12 +137,11 @@
   border-top-width: 2px;
   transform: scale(1.02);
 }
-#governance section .box1{
-  
+#governance section .back{
+  color: white;
+  background-color: #00a0c6;
 }
-#governance section .box1 .allbox{
-  
-}
+
 
 
 
