@@ -39,3 +39,16 @@ footer {
     padding-top: 15px;
     font-size: 13px;
   }
+.top{
+  position: fixed;
+  right: -40px;
+  top: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.topshow{
+  right:20px;
+}
+.top>button{
+  
+}

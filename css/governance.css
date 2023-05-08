@@ -111,10 +111,10 @@
 }
 #governance section ol li h3{
   padding: 20px;
-  background-color: #00a0c6;
   display: block;
   height: 66px;
   margin-top: 30px;
+  background-color: #00a0c6;
   color: white;
 }
 #governance section ol li .back{
@@ -130,6 +130,8 @@
 #governance section div ul li p{
     
 }
+.navlist ol li{
+}
 .current{
   background-color: white;
   border: 1px solid blue;
@@ -137,9 +139,13 @@
   border-top-width: 2px;
   transform: scale(1.02);
 }
-#governance section .back{
+.back{
   color: white;
-  background-color: #00a0c6;
+  background-color: #00a0c6 !important;
+}
+.bakc2{
+  color: black !important;
+  background-color: #ccc !important;
 }
 
 
