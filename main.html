@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,79 @@
     <link rel="stylesheet" href="css/response.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
+    <!-- 타이틀 애니메이션 slick -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".wlist").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 2000,
+                infinite: true,
+                vertical: true
+            });
+            $('.societyArticle').slick({
+                autoplay: true, //자동실행
+                dots: true, //페이지버튼
+                arrows: true, //좌우버튼
+                // fade:true,
+                pauseOnHover: true, //마우스호버시 일시정지
+                slidesPerRow: 2, //요소 안에 볼 슬라이드 갯수
+                // slidesToScroll:2, //배너 스크롤 갯수
+                autoplaySpeed: 2000 //자동실행 지연시간
+            });
+            $('#title .slick-dots').append('<button type="button" class="btn_pause">일시정지</button>');
+            var pw = 0;
+            $('.btn_pause').click(function () {
+                if (pw == 0) {
+                    $('.btn_pause').removeClass("stop");
+                    $('.btn_pause').addClass('on play');
+                    $('.wlist').slick('slickPause')
+                    pw = 1;
+                    console.log(pw)
+                } else {
+                    $('.btn_pause').removeClass('on play');
+                    $('.btn_pause').addClass("stop");
+                    $('.wlist').slick('slickPlay')
+                    pw = 0;
+                    console.log(pw)
+                }
+            });
+            $('.societyArticle').append('<button type="button" class="btn_pause">일시정지</button>');
+            var sw = 0;
+            $('.btn_pause').click(function () {
+                $('.btn_pause').text('일시정지');
+                if (sw == 0) {
+                    $('.btn_pause').addClass('on');
+                    $('.societyArticle').slick('slickPause')
+                    $('.btn_pause').text('재생');
+                    sw = 1;
+                } else {
+                    $('.btn_pause').removeClass('on');
+                    $('.societyArticle').slick('slickPlay')
+                    $('.btn_pause').text('일시정지');
+                    sw = 0;
+                }
+            });
+            $('.societyArticle>button').wrapAll('<span class="control"></span>');
+
+        // 탑버튼 스크롤시 보이게,안보이게
+        $("footer").after('<div class="top"><button>위로</button></div>');
+        $(window).scroll(function(){
+            if($(window).scrollTop()>$("main").offset().top){
+                $("footer + .top").addClass("topshow");
+            }else{
+                $("footer + .top").removeClass("topshow");
+            }
+        });
+    });
+    </script>
 </head>
+
 <body>
     <!-- 상단영역 마크업주석  -->
     <header>
@@ -85,7 +158,7 @@
                         <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">투자자정보</a></h3>
                             <ul class="sublist">
-                                <li ><a href="" class="block">재무정보</a></li>
+                                <li><a href="" class="block">재무정보</a></li>
                                 <li><a href="" class="block">주식정보</a></li>
                                 <li><a href="" class="block">IR자료실</a></li>
                             </ul>
@@ -181,12 +254,25 @@
                 <li><a href="#">ENGLISH</a></li>
                 <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
             </ul>
+            <a class="ham"></a>
         </nav>
     </header>
     <!-- 타이틀영역 -->
     <div id="title">
-        <h2 class="h1">사람과 사람을 <span class="bold">잇다</span></h2>
-        <p>이웃을 생각하고 사랑을 실천하는<br>따듯한 동행을 함께 합니다</p>
+        <div class="wlist">
+            <div class="list">
+                <h2 class="h1">사람과 사람을 <span class="bold">잇다</span></h2>
+                <p>이웃을 생각하고 사랑을 실천하는<br>따듯한 동행을 함께 합니다</p>
+            </div>
+            <div class="list">
+                <h2 class="h1">세상과 사람을 <span class="bold">잇다</span></h2>
+                <p class="p">누군가의 만남 혹은 기다림 설렘<br>그 순간을 함께합니다</p>
+            </div>
+            <div class="list">
+                <h2 class="h1">미래와 사람을 <span class="bold">잇다</span></h2>
+                <p class="p">오늘의 사막이 내일의 숲이 되도록<br>푸른 희망을 심습니다</p>
+            </div>
+        </div>
         <a href="">SERVICE</a>
     </div>
     <!-- 메인영역 -->
@@ -205,7 +291,7 @@
                     <li>
                         <a href="">
                             <h3 class="h3">창업회장관</h3>
-                            <p class="textcenter hide">수송외길 80년 정석<span class="block"></span> 조중훈 창업회장</p>     
+                            <p class="textcenter hide">수송외길 80년 정석<span class="block"></span> 조중훈 창업회장</p>
                         </a>
                     </li>
                     <li>
@@ -227,17 +313,51 @@
         <section id="society" class="padding30">
             <div class="wrap">
                 <h2 class="h3">사회공원</h2>
-                <p class="p ccc">작은 실천을 큰 사랑으로<span class="block"></span> 더 따뜻하고 아름다운 세상을<span class="block"></span> 꿈꿉니다</p>
-                <article>
-                    <a href="" class="block">
-                        <figure>
-                            <img src="img/s1.jpg" alt="487 * 150 size image">
-                            <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
-                        </figure>
-                        <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
-                        <date class="p ccc">2021-05-25</date>
-                    </a>
-                </article>
+                <p class="p ccc">작은 실천을 큰 사랑으로<span class="block"></span> 더 따뜻하고 아름다운 세상을<span class="block"></span>
+                    꿈꿉니다</p>
+                <div class="societyArticle">
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/s1.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air1.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air2.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air3.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                </div>
+
             </div>
         </section>
         <!-- 한진뉴스 -->
@@ -252,7 +372,8 @@
                                 <figcaption class="hide">택배터미널방점검사진</figcaption>
                             </figure>
                             <h3 class="h4">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시</h3>
-                            <p class="p ccc">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시⊙설 특수기 기간 물량 증가하는 허브 터미널에 조현민∙노삼석 사장 방문하여 집중 점검⊙현장 종사자에 안전보건관리 주의 당부 및 노고 격려 위한 격려</p>
+                            <p class="p ccc">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시⊙설 특수기 기간 물량 증가하는 허브 터미널에
+                                조현민∙노삼석 사장 방문하여 집중 점검⊙현장 종사자에 안전보건관리 주의 당부 및 노고 격려 위한 격려</p>
                         </a>
                     </li>
                     <li>
@@ -300,6 +421,7 @@
             <p class="p ccc">COPYRIGHT HANJIN KAL. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
