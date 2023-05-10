@@ -64,7 +64,6 @@ $(document).ready(function () {
             $(this).parent().addClass("current");
             $(this).parent().siblings().removeClass("current");
             $(this).parent().siblings().children("a").removeClass("blue");
-
             $(".navlist:nth-of-type(" + ($(this).parent().index() + 1) + ")").show(500);
             $(".navlist").not(".navlist:nth-of-type(" + ($(this).parent().index() + 1) + ")").hide(200);
 
@@ -113,7 +112,13 @@ $(document).ready(function () {
     // let show = false;
     $("ol li").click(function () {//!().명령어() 앞에 !붙이면 not으로 사용가능
         $(this).children(".box1").slideToggle();
-        $(this).children("h3").toggleClass("back2");
+        $(this).children("ol li h3").toggleClass("back2");
+        if($(this).children('h3').hasClass("back2")==1){
+            $(".allcheck").text("전체접기").addClass('back');
+        }
+        else{
+            $(".allcheck").text("전체보기").removeClass('back');
+        }
 
         // if (show == true) {
         //     $(this).find(".box1").slideUp(500);
@@ -129,14 +134,17 @@ $(document).ready(function () {
     });
     var sw = 0;
     $(".allcheck").click(function () {
+        // $('ol li h3').removeClass("back2");
         $(".box1").slideToggle();
         $(this).toggleClass("back");
         if($(this).hasClass("back")==1){
-            $(this).text("전체접기")
+
         }
         else{
-            $(this).text("전체보기")
-        }
+            $(this).text("전체보기");
+
+        };
+        
     //     if (sw == 0) {
     //         $(this).removeClass('on');
     //         $(this).text('전체보기');
@@ -152,4 +160,5 @@ $(document).ready(function () {
     //         sw = 0;
     //     }
     });
+    
 });
