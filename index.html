@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PF1-(주)한진칼-인사말</title>
+    <title>(주)한진칼-PF1</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +13,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/subtitle.css">
-    <link rel="stylesheet" href="css/greeting.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="css/response.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
+    <!-- 타이틀 애니메이션 slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="slick/slick-theme.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".wlist").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                speed: 2000,
+                infinite: true,
+                vertical: true
+            });
+            $('.societyArticle').slick({
+                autoplay: true, //자동실행
+                dots: true, //페이지버튼
+                arrows: true, //좌우버튼
+                // fade:true,
+                pauseOnHover: true, //마우스호버시 일시정지
+                slidesPerRow: 2, //요소 안에 볼 슬라이드 갯수
+                // slidesToScroll:2, //배너 스크롤 갯수
+                autoplaySpeed: 2000 //자동실행 지연시간
+            });
+            $('#title .slick-dots').append('<button type="button" class="btn_pause">일시정지</button>');
+            var pw = 0;
+            $('.btn_pause').click(function () {
+                if (pw == 0) {
+                    $('.btn_pause').removeClass("stop");
+                    $('.btn_pause').addClass('on play');
+                    $('.wlist').slick('slickPause')
+                    pw = 1;
+                    console.log(pw)
+                } else {
+                    $('.btn_pause').removeClass('on play');
+                    $('.btn_pause').addClass("stop");
+                    $('.wlist').slick('slickPlay')
+                    pw = 0;
+                    console.log(pw)
+                }
+            });
+            $('.societyArticle').append('<button type="button" class="btn_pause">일시정지</button>');
+            var sw = 0;
+            $('.btn_pause').click(function () {
+                $('.btn_pause').text('일시정지');
+                if (sw == 0) {
+                    $('.btn_pause').addClass('on');
+                    $('.societyArticle').slick('slickPause')
+                    $('.btn_pause').text('재생');
+                    sw = 1;
+                } else {
+                    $('.btn_pause').removeClass('on');
+                    $('.societyArticle').slick('slickPlay')
+                    $('.btn_pause').text('일시정지');
+                    sw = 0;
+                }
+            });
+            $('.societyArticle>button').wrapAll('<span class="control"></span>');
+
+        // 탑버튼 스크롤시 보이게,안보이게
+        $("footer").after('<div class="top"><button>위로</button></div>');
+        $(window).scroll(function(){
+            if($(window).scrollTop()>$("main").offset().top){
+                $("footer + .top").addClass("topshow");
+            }else{
+                $("footer + .top").removeClass("topshow");
+            }
+        });
+    });
+    </script>
 </head>
+
 <body>
     <!-- 상단영역 마크업주석  -->
     <header>
@@ -87,7 +158,7 @@
                         <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">투자자정보</a></h3>
                             <ul class="sublist">
-                                <li ><a href="" class="block">재무정보</a></li>
+                                <li><a href="" class="block">재무정보</a></li>
                                 <li><a href="" class="block">주식정보</a></li>
                                 <li><a href="" class="block">IR자료실</a></li>
                             </ul>
@@ -183,35 +254,153 @@
                 <li><a href="#">ENGLISH</a></li>
                 <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
             </ul>
+            <a class="ham"></a>
         </nav>
     </header>
-    <!-- 서브타이틀 -->
-    <div id="subtitle">
-        <div class="wrap flex">
-            <h2 class="h1 bold">인사말</h2>
-            <button class="h3">경영철학</button>
+    <!-- 타이틀영역 -->
+    <div id="title">
+        <div class="wlist">
+            <div class="list">
+                <h2 class="h1">사람과 사람을 <span class="bold">잇다</span></h2>
+                <p>이웃을 생각하고 사랑을 실천하는<br>따듯한 동행을 함께 합니다</p>
+            </div>
+            <div class="list">
+                <h2 class="h1">세상과 사람을 <span class="bold">잇다</span></h2>
+                <p class="p">누군가의 만남 혹은 기다림 설렘<br>그 순간을 함께합니다</p>
+            </div>
+            <div class="list">
+                <h2 class="h1">미래와 사람을 <span class="bold">잇다</span></h2>
+                <p class="p">오늘의 사막이 내일의 숲이 되도록<br>푸른 희망을 심습니다</p>
+            </div>
         </div>
+        <a href="">SERVICE</a>
     </div>
     <!-- 메인영역 -->
-    <main id="greeting">
-        <nav class="breadcrumb">
-            <ol class="wrap flex">
-                <li><a href="index.html">Home </a></li>
-                <li><a href="greeting.html"> 한진소개</a></li>
-                <li>인사말</li>
-            </ol>
-        </nav>
-        <section>
+    <main>
+        <!-- 한진소개 -->
+        <section id="intro" class="padding30">
             <div class="wrap">
-                <strong class="h2 block bold">국민으로부터 신뢰와 사랑을 받는<span class="block"></span><span class="blue">국민의 기업</span>으로 계속 도약하겠습니다.</strong>
-                <strong class="h3 block">한진그룹 지주회사인 한진칼 홈페이지를 찾아주셔서 감사합니다.</strong>
-                <p>한진칼은 한진그룹의 경영 투명성 제고와 지배 구조 선진화를 위해 지난 2013년 설립된 이래 자회사들의 자율경영과 책임경영에 힘쓰고 있습니다.</p>
-                <p>한진그룹은 1945년 11월 ‘한민족(韓民族)의 전진(前進)’이라는 의미를 담은 ‘한진상사’ 창업으로 역사를 시작했습니다. ‘한진(韓進)’이라는 의미에는 사업을 통해 우리 민족을 잘 살게 하겠다는 故조중훈 선대회장의 신념이 담겨 있습니다.</p>
-                <p>한진그룹은 1967년 2월에는 해운업 진출 기반을 위해 대진해운을 세웠고, 1968년 2월에는 한국공항, 이듬해인 1969년에는 대한항공공사를 인수해, 대한항공을 설립했습니다. 그룹의 주력 계열사인 대한항공은 외국 항공사들이 닮고 싶어하는 글로벌 선도 항공사로 거듭났으며, ㈜한진, 진에어 등 계열사는 변화와 혁신을 기반으로 물류 산업의 선두 주자로 성장했습니다. </p>
-                <p>한진칼은 70여년의 역사를 자랑하는 한진그룹이 세계 최고의 종합 물류 기업으로 자리매김할 수 있도록 노력하고 있습니다. 항공운송 부문에서는 글로벌 시장에서 영업 경쟁력을, 종합물류 부문에서는 생산능력 및 고객 네트워크 확대를, 호텔∙레저 부문에서는 항공운송 부문과 연계 영업 강화 및 운영 효율성 개선 등을 통해 계열사들의 수익성을 지속적으로 확대해 나갈 예정입니다.</p>
-                <p>한진칼은 주주 중시 정책을 계속 확대하는 동시에 그룹 사업구조를 선진화 시켜나갈 수 있도록 하겠습니다. 또한 지배구조를 지속적으로 개선해 경영 투명성을 더욱 높여나갈 것입니다. </p>
-                <p>한진칼 임직원은 투명한 지배구조를 기반으로 궁극적으로 한진그룹의 기업가치와 주주가치를 높이기 위해 최선의 노력을 다하겠습니다. 감사합니다.</p>
-                <p>한진칼 임직원 일동</p>
+                <h2>한진소개</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <h3 class="h3"> 한진네트워크</h3>
+                            <p class="textcenter hide">무한하고 독창적인 <span class="block"></span>가치를 지닌 기업</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h3 class="h3">창업회장관</h3>
+                            <p class="textcenter hide">수송외길 80년 정석<span class="block"></span> 조중훈 창업회장</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h3 class="h3">그룹역사관</h3>
+                            <p class="textcenter hide">한진그룹,수송보국<span class="block"></span> 70년의 역사</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h3 class="h3">한진그룹 SNS</h3>
+                            <p class="textcenter hide">한진과 소통을 위한<span class="block"></span> SNS채널 운영</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 사회공헌 -->
+        <section id="society" class="padding30">
+            <div class="wrap">
+                <h2 class="h3">사회공원</h2>
+                <p class="p ccc">작은 실천을 큰 사랑으로<span class="block"></span> 더 따뜻하고 아름다운 세상을<span class="block"></span>
+                    꿈꿉니다</p>
+                <div class="societyArticle">
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/s1.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air1.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air2.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/air3.jpg" alt="487 * 150 size image">
+                                <figcaption class="hide">경찰청관계자가 물품전달하는 장면</figcaption>
+                            </figure>
+                            <p class="p">㈜한진-경찰청, 장기실종아동 찾기 ‘호프테이프(Hope Tape)’ 캠페인 강화</p>
+                            <date class="p ccc">2021-05-25</date>
+                        </a>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+        <!-- 한진뉴스 -->
+        <section id="news" class="padding30">
+            <div class="wrap">
+                <h2 class="h3">그룹사 소식</h2>
+                <ul>
+                    <li>
+                        <a href="" class="block">
+                            <figure>
+                                <img src="img/n1.jpg" alt="">
+                                <figcaption class="hide">택배터미널방점검사진</figcaption>
+                            </figure>
+                            <h3 class="h4">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시</h3>
+                            <p class="p ccc">㈜한진, 설 명절 안전에 ‘총력’…조현민∙노삼석 사장 택배 터미널 직접 점검 실시⊙설 특수기 기간 물량 증가하는 허브 터미널에
+                                조현민∙노삼석 사장 방문하여 집중 점검⊙현장 종사자에 안전보건관리 주의 당부 및 노고 격려 위한 격려</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            <h3 class="p ccc">[㈜한진]한진부산컨테이너터미널㈜, ESG 경영 일환, 사회복지공동모금회 1억 기부</h3>
+                            <date class="p ccc">2022-01-26</date>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            <h3 class="p ccc">[대한항공]대한항공, 삼성전자와 마일리지 적립 협업</h3>
+                            <date class="p ccc">2022-01-10</date>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            <h3 class="p ccc">[㈜한진]㈜한진 ‘21년 잠정실적 발표, 매출 누계 2조 5,033억원…’역대 최대’</h3>
+                            <date class="p ccc">2022-01-07</date>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block">
+                            <h3 class="p ccc">[대한항공]조원태 한진그룹 회장, “2022년은 위기가 가져온 패러다임을 대 전환</h3>
+                            <date class="p ccc">2022-01-03</date>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -232,6 +421,7 @@
             <p class="p ccc">COPYRIGHT HANJIN KAL. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
 </body>
+
 </html>

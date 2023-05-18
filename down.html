@@ -21,14 +21,32 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
     <script type="text/javascript">
-        $(function(){
-            
-        })
+        $(document).ready(function(){
+            $("section .bigbox .photo ul.h5 li figure img").click(function(){
+                    $('.wfigure').remove();
+                    $(this).parents(".h5").prepend('<div class="wfigure"></div>');
+                    $(this).parent("figure").clone().appendTo('.wfigure').fadeIn();
+                    $(".wfigure").append('<button class="close">닫기</button>');
+                    $(".wfigure").click(function(){
+                        $(".wfigure").fadeOut();
+                    });
+                    // let imgx=$(".popimg img").position().left;
+                    // let imgy=$(".popimg img").position().top;
+                    // imgx=imgx + $(".popimg img").width() - $(".popimg .close").width()/2;
+                    // imgy=imgy - $(".popimg .close").height()/2;
+                    // $(".close").css({"left":imgx,"top":imgy});
+                    //console.log($(".popimg img").offset());
+                    //console.log($(".popimg img").position());
+                });
+        });
+        function downPdf(n) {
+                window.open('down/사업은+예술이다_'+n+'장.pdf', '_blank');
+            };
     </script>
 </head>
 <body>
     <header>
-        <h1><a href="main.html">HANJIN KAL</a></h1>
+        <h1><a href="index.html">HANJIN KAL</a></h1>
         <nav>
             <ul class="gnb">
                 <li>
@@ -187,20 +205,21 @@
                 <li><a href="#">ENGLISH</a></li>
                 <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
             </ul>
+            <a class="ham"></a>
         </nav>
     </header>
     <!-- 서브타이틀 -->
     <div id="subtitle">
         <div class="wrap flex">
-            <h2 class="h1 bold">정석 조중훈</h2>
-            <button class="h3">사업은 예술이다</button>
+            <h2 class="h1 bold">전기 다운로드</h2>
+            <button class="h3 b"><a href="art.html">사업은 예술이다.</a></button>
         </div>
     </div>
     <!-- 메인영역 -->
     <main id="wart">
         <nav class="breadcrumb">
             <ol class="wrap flex">
-                <li><a href="main.html">Home </a></li>
+                <li><a href="index.html">Home </a></li>
                 <li><a href="greeting.html"> 한진그룹</a></li>
                 <li><a href="president.html"> 창업회장관</a></li>
                 <li>전기다운로드</li>
@@ -210,7 +229,7 @@
             <div class="wrap">
                 <ul class="nav flex h4 bold">
                     <li><a href="president.html">정석 조중훈</a></li>
-                    <li><a href="art.html">사업은 예술이다</a></li>
+                    <li><a href="art.html">사업은 예술이다.</a></li>
                     <li><a href="down.html" class="blue">전기 다운로드</a></li>
                 </ul>
             <div class="bigbox">
@@ -219,59 +238,59 @@
                         <li>
                             <p class="p">표지 및 목차</p>
                             <figure><img src="img/life_img1.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(0)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">1장 파도마저 삼킨
                                 오디세이</p>
                             <figure><img src="img/life_img2.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(1)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">2장 퀴논의 전설</p>
                             <figure><img src="img/life_img3.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(2)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">3장 대한항공 인수</p>
                             <figure><img src="img/life_img4.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(3)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">4장 대한의 날개에서<span class="block"></span>
                                 세계의 날개로</p>
                             <figure><img src="img/life_img5.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(4)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">5장 해운왕<span class="block"></span>
                                 꿈을 이루다</p>
                             <figure><img src="img/life_img6.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(5)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">6장 수송외길을<span class="block"></span>
                                 위한 변주곡</p>
                             <figure><img src="img/life_img7.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(6)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">7장 열정의 민간<span class="block"></span>
                                 외교가</p>
                             <figure><img src="img/life_img8.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(7)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">8장 인재의 숲을<span class="block"></span>
                                 가꾼 정원사</p>
                             <figure><img src="img/life_img9.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(8)">다운로드</button>
                         </li>
                         <li>
                             <p class="p">9장 인생과<span class="block"></span>
                                 사업의 예술가</p>
                             <figure><img src="img/life_img10.jpg" alt=""></figure>
-                            <button>다운로드</button>
+                            <button onclick="downPdf(9)">다운로드</button>
                         </li>
                     </ul>
                 </div>
