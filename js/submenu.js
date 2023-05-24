@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    $(".rs").hide();
+    $(".ham").click(function(){
+        // $(".rs").slideToggle(100);
+        $(".rs").animate({width:"toggle"},210);
+    });
+    $(".rs .sb .rsb").hide();
+    $(".rs .sb li h2").click(function(){
+        $(this).parent().children(".rsb").slideToggle(500);
+    });
+    $(".h5").click(function(){
+        $(this).parent().children(".rrr1").slideToggle(300);
+        $(this).parent().children(".side").slideToggle(300);
+    });
+
+    
     //li에 마우스를 올리면 실행하시오 $("li").hover();
     $("ul.gnb > li").hover( //hover 사용자행위(이벤트)
         function () { //마우스엔터 mouseenter이벤트
@@ -113,13 +128,47 @@ $(document).ready(function () {
     $("ol li").click(function () {//!().명령어() 앞에 !붙이면 not으로 사용가능
         $(this).children(".box1").slideToggle();
         $(this).children("ol li h3").toggleClass("back2");
-        if($(this).children('h3').hasClass("back2")==1){
+        if ($(this).children('h3').hasClass("back2") == 1) {
             $(".allcheck").text("전체접기").addClass('back');
         }
-        else{
+        else {
             $(".allcheck").text("전체보기").removeClass('back');
         }
+    let hideMenus = true;
+    $(".navlist .check .allcheck").click(function(){
+        if(hideMenus){
+            // 메뉴가 숨겨져있는 상태일 때 전체보기 버튼을 누른 경우
 
+            // 전체보기 버튼을 전체 감추기 버튼으로 변경
+            $(this).addClass("back");
+            $(this).text("전체접기");
+            
+            // 모든 메뉴들 보여주기
+            $("#governance section .navlist ol li").find("h3").addClass("back2");
+            $("#governance section .navlist ol li").find(".box1").slideDown();
+            
+            // 전체 메뉴를 보여줬으니 다음에 전체 감추기 버튼 클릭시 아래 else명령을 실행하기 위해 
+            // hideMenus 변수를 false(거짓)으로 바꿔준다.
+            hideMenus = false;
+
+        }else{
+            // 메뉴가 전부 보여져 있는 상태에서 전체 감추기 버튼을 누른 경우
+
+            // 전체 감추기 버튼을 전체보기 버튼으로 변경
+            $(this).removeClass("back");
+            $(this).text("전체보기");
+            
+
+            // 펼쳐져 있던 메뉴들을 전부 안보이도록 가려준다.
+            $("#governance section .navlist ol li").find("h3").removeClass("back2");
+            $("#governance section .navlist ol li").find(".box1").slideUp();
+
+
+            // 전체 메뉴들을 감췄으니 다음에 이 버튼을 누를 경우 if()명령을 실행하기 위해 
+            // 아래 변수에 true(참)를 입력해준다.
+            hideMenus = true;
+        }
+    });
         // if (show == true) {
         //     $(this).find(".box1").slideUp(500);
         //     $(this).find("h3").removeClass("back");
@@ -137,28 +186,28 @@ $(document).ready(function () {
         // $('ol li h3').removeClass("back2");
         $(".box1").slideToggle();
         $(this).toggleClass("back");
-        if($(this).hasClass("back")==1){
+        if ($(this).hasClass("back") == 1) {
 
         }
-        else{
+        else {
             $(this).text("전체보기");
 
         };
-        
-    //     if (sw == 0) {
-    //         $(this).removeClass('on');
-    //         $(this).text('전체보기');
-    //         $("ol li h3").removeClass("back");
-    //         $("ol li").find(".box1").slideUp(500);
-    //         sw = 1;
-    //     } else {
-    //         $(this).addClass('on');
-    //         $(this).text('전체접기');
-    //         $("ol li").find(".box1").addClass("show");
-    //         $("ol li h3").addClass("back");
-    //         $("ol li").find(".box1").removeClass("hide").slideDown(500);
-    //         sw = 0;
-    //     }
+
+        //     if (sw == 0) {
+        //         $(this).removeClass('on');
+        //         $(this).text('전체보기');
+        //         $("ol li h3").removeClass("back");
+        //         $("ol li").find(".box1").slideUp(500);
+        //         sw = 1;
+        //     } else {
+        //         $(this).addClass('on');
+        //         $(this).text('전체접기');
+        //         $("ol li").find(".box1").addClass("show");
+        //         $("ol li h3").addClass("back");
+        //         $("ol li").find(".box1").removeClass("hide").slideDown(500);
+        //         sw = 0;
+        //     }
     });
-    
+
 });

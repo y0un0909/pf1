@@ -1,6 +1,7 @@
 body{
   font-family: 'Noto Sans KR', sans-serif;
 }
+
 .margin30{
  margin-top:30px; 
  margin-bottom:30px; 
@@ -149,4 +150,7 @@ main section .wrap ul.nav li:nth-child(1) a{
 }
 .stop{
   background-image:url(../img/stop.png);
+}
+.show{
+  display: block !important;
 }

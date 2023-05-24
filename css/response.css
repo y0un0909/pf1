@@ -95,12 +95,16 @@
   background-repeat: no-repeat;
   width: 325px;
   }
-  header nav>*:not(:last-child){
+  header nav .gnb{
+    display: none;
+  }
+  header nav .etcmenu{
     display: none;
   }
   .ham{
     display: block;
     transform: translateX(-20px);
+    cursor: pointer;
   }
   /*   타이틀영역   */
   div#title{

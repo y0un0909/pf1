@@ -343,3 +343,79 @@ main section#intro div ul li a:hover::after{
   justify-content: center;
   z-index: 3;
 }
+
+
+
+/* ham사이드바 */
+.rs{
+  
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 76px;
+  right: 0px;
+  background-color: white;
+  width: 200px;
+}
+.rs .sb{
+  
+  flex-direction: column;
+  display: flex;
+}
+.rs .sb li{
+  
+}
+.rs .sb li h2{
+  
+  background-color: #00a0c6;
+  height: 30px;
+  padding-top: 5px;
+}
+.rs .sb li h2 a{
+  
+  font-weight: bold;
+  color: white;
+  padding-left: 15px;
+}
+.rs .sb .rsb{
+  
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+.rs .sb .rsb .h5{
+  
+  padding-left: 5px;
+}
+.rs .sb .rsb .h5 a{
+  
+  color: #00a0c6;
+  font-weight: bold;
+}
+.rs .sb .rsb li{
+  
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+.rs .sb .rsb li h3{
+  
+}
+.rs .sb .rsb li ul{
+  
+  /*! list-style: disc; */
+  padding-left: 15px;
+}
+.rs .sb .rsb li ul li{
+  
+  list-style: disc;
+}
+#subtitle .wrap .b{
+  
+  left: 10%;
+}
+#subtitle .wrap .b::before{
+  
+  top: calc((100% - 32px) / 2);
+}
+
+

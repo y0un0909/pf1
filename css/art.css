@@ -294,15 +294,14 @@ main section .wrap ul.nav li:nth-child(2) a{
   z-index: 6;
 }
 .popupimg img{
- width: 390px;
+ width: 500px;
   height: 400px;
 }
 .popupimg figure figcaption{
   position: absolute;
-  top: calc(50% - -162px);
-  left: 30%;
+  top: calc(50% - -200px);
   background-color: white;
-  width: 40%;
+  width: 500px;
   height: auto;
   color: #00a0c6;
   font-weight: bold;
@@ -312,7 +311,7 @@ main section .wrap ul.nav li:nth-child(2) a{
 
 .popupimg .close{
   position: absolute;
-  right: calc(50% - (390px / 2));
+  right: calc(50% - (500px / 2));
   top: calc(50% - (400px / 2) - 40px);
   font-size: 0;
   background-image: url(../img/close.jpg);
