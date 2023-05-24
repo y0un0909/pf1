@@ -88,7 +88,6 @@
   header h1{
     margin: 0 auto;
     transform: scale(1.4);
-    padding-left: 19%;
   }
   header h1 a{
   background-image: url(../img/hj_logo.png);
@@ -260,9 +259,9 @@
   .block{
   display: initial;
   }
-  
-}
-#society .wrap article a figure:hover{
+  .topshow{
+    
+  }
   
 }
 
