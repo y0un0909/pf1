@@ -383,6 +383,7 @@ main section#intro div ul li a:hover::after{
   padding-top: 15px;
   padding-bottom: 15px;
   flex-direction: column;
+  padding-left: 5px;
 }
 .rs .sb .rsb .h5{
   
