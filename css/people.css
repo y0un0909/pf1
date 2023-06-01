@@ -28,6 +28,20 @@
   margin: 0 auto;
   box-shadow: 2px 7px 2px #ccc;
 }
+#people section div ul li:nth-child(2)::before{
+  
+  background-image: url(../img/talent_img2.gif);
+  background-repeat: no-repeat;
+  background-size: 230px 230px;
+  background-position-x: -10px;
+}
+#people section div ul li:nth-child(3)::before{
+  
+  background-image: url(../img/talent_img3.gif);
+  background-repeat: no-repeat;
+  background-size: 230px 220px;
+  background-position-x: -13px;
+}
 #people section div ul li h4{
 
 }
